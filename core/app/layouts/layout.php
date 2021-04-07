@@ -975,6 +975,21 @@
          	"paging":         false
            });
       </script>
+      <script type="text/javascript">
+        
+
+        $(document).ready(function () {
+      $('#dtHorizontalVerticalExample').DataTable({
+        
+        
+      "scrollX": true,
+      "scrollY": 450,
+      "order": [[ 0, "desc" ]]
+      });
+      $('.dataTables_length').addClass('bs-select');
+      });
+  </script>
+  
    </body>
 
 <!-- Mirrored from colorlib.net/metrical/light/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jan 2020 21:19:25 GMT -->

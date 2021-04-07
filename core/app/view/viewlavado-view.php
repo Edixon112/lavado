@@ -16,9 +16,11 @@ $lavados=LavadoData::getAll();
                                  <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
                               </div>
                            </div>
-                           <div class="card-body collapse show" id="collapse7">
-                              <table id="scrollableTable" class="table hover responsive display nowrap">
-                                 <thead>
+                           <div class="table-responsive">
+
+        
+           <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+                                <thead class="tx-dark tx-uppercase tx-10 tx-bold">
                                     <tr>
                                        <th>ID</th>
                                        <th>Fecha de entrada</th>
