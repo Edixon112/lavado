@@ -39,7 +39,7 @@ class VehiculoData
 	
 
 	public static function getById($id){
-		$sql = "select * from proceso where id='".$id."'";
+		$sql = "select * from vehiculo where id='".$id."'";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new VehiculoData());
 

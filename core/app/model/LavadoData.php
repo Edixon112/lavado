@@ -12,20 +12,24 @@ class LavadoData
         $this->fechadesalida = "";
 		$this->idcliente = "";
         $this->idvehiculo = "";
+		$this->estado="";
       
 	} 
 
-   
-
-
-	public function add(){
-		$sql = "insert into lavado (fechadeentrada,fechadesalida,idcliente,idvehiculo) ";
-		$sql .= "value (\"$this->fechadeentrada\",\"$this->fechadesalida\",\"$this->idcliente\",\"$this->idvehiculo\")";
-		return Executor::doit($sql);
+	public function update(){//ACTUALIZAR LOS ATRIBUTOS DIRECTAMENTE EN LA BASE DE DATOS 
+		$sql = "update lavado set
+		estado='".$this->estado."', 
+		fechadesalida='".$this->fechadesalida."'
+		where id='".$this->id."'";
+		return	Executor::doit($sql);
 	}
 
 
-
+	public function add(){
+		$sql = "insert into lavado (fechadeentrada,idcliente,idvehiculo) ";
+		$sql .= "value (\"$this->fechadeentrada\",\"$this->idcliente\",\"$this->idvehiculo\")";
+		return Executor::doit($sql);
+	}
 
 
 
@@ -42,9 +46,9 @@ class LavadoData
 	
 
 	public static function getById($id){
-		$sql = "select * from proceso where id='".$id."'";
+		$sql = "select * from lavado where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new MensajeroData());
+		return Model::one($query[0],new LavadoData());
 
 	}
 
@@ -52,14 +56,14 @@ class LavadoData
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new MensajeroData());
+		return Model::many($query[0],new LavadoData());
 	}
 
 	
 	public static function getLike($q){
 		$sql = "select * from ".self::$tablename." where id_empresa like '%$q%' or placa like '%$q%'";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new MensajeroData());
+		return Model::many($query[0],new LavadoData());
 
 	}
 

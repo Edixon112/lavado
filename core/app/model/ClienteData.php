@@ -40,7 +40,7 @@ class ClienteData
 	
 
 	public static function getById($id){
-		$sql = "select * from proceso where id='".$id."'";
+		$sql = "select * from cliente where id='".$id."'";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new ClienteData());
 
