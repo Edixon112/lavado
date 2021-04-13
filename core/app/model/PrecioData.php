@@ -15,7 +15,7 @@ class PrecioData
 
 	public function add(){
 		$sql = "insert into precio (nombre,id_tipo) ";
-		$sql .= "value (\"$this->nombre\",\"$this->id_tipo\)";
+		$sql .= "value (\"$this->nombre\",\"$this->id_tipo\")";
 		return Executor::doit($sql);
 	}
 

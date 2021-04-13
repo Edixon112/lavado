@@ -14,7 +14,7 @@ class TipoData
 
 	public function add(){
 		$sql = "insert into tipo (nombre) ";
-		$sql .= "value (\"$this->nombre\)";
+		$sql .= "value (\"$this->nombre\")";
 		return Executor::doit($sql);
 	}
 
