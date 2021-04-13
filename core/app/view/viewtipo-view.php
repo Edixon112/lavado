@@ -10,7 +10,7 @@ $tipos=TipoData::GetAll();
                                  Scrollable Table
                               </h4>
                               <div class="card-header-btn">
-                                 <a  href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
+                                 <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#collapse7" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
                                  <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
                                  <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
                                  <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
@@ -31,8 +31,8 @@ $tipos=TipoData::GetAll();
                            ?>
 
                                     <tr>
-                                       <td><?php echo $cliente->id;  ?></td>
-                                       <td><?php echo $cliente->nombre; ?></td>
+                                       <td><?php echo $tipo->id;  ?></td>
+                                       <td><?php echo $tipo->nombre; ?></td>
                                        <td class="text-right table-actions">
                                           <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
                                           <a class="table-action  mg-r-10" href=""><i class="fa fa-trash"></i></a>
