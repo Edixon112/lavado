@@ -1,30 +1,23 @@
-
-
 <?php
-class VehiculoData
+class PrecioData
  {
-	public static $tablename = "vehiculo";
+	public static $tablename = "precio";
 
 
-	public function VehiculoData(){
-		$this->id = ""; 
-		$this->placa = "";
-        $this->marca = "";
-		$this->id_tipo = "";
+	public function PrecioData(){
+		$this->id = "";
+        $this->id_tipo = "";  
+		$this->nombre = "";
 	} 
 
    
 
 
 	public function add(){
-		$sql = "insert into vehiculo (placa,marca,id_tipo) ";
-		$sql .= "value (\"$this->placa\",\"$this->marca\",\"$this->id_tipo\")";
+		$sql = "insert into precio (nombre,id_tipo) ";
+		$sql .= "value (\"$this->nombre\",\"$this->id_tipo\)";
 		return Executor::doit($sql);
 	}
-
-
-
-
 
 
 	public static function delById($id){
@@ -40,9 +33,9 @@ class VehiculoData
 	
 
 	public static function getById($id){
-		$sql = "select * from vehiculo where id='".$id."'";
+		$sql = "select * from precio where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new VehiculoData());
+		return Model::one($query[0],new PrecioData());
 
 	}
 
@@ -50,14 +43,14 @@ class VehiculoData
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new VehiculoData());
+		return Model::many($query[0],new PrecioData());
 	}
 
 	
 	public static function getLike($q){
 		$sql = "select * from ".self::$tablename." where id_empresa like '%$q%' or placa like '%$q%'";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new VehiculoData());
+		return Model::many($query[0],new PrecioData());
 
 	}
 

@@ -1,30 +1,22 @@
-
-
 <?php
-class VehiculoData
+class TipoData
  {
-	public static $tablename = "vehiculo";
+	public static $tablename = "tipo";
 
 
-	public function VehiculoData(){
+	public function TipoData(){
 		$this->id = ""; 
-		$this->placa = "";
-        $this->marca = "";
-		$this->id_tipo = "";
+		$this->nombre = "";
 	} 
 
    
 
 
 	public function add(){
-		$sql = "insert into vehiculo (placa,marca,id_tipo) ";
-		$sql .= "value (\"$this->placa\",\"$this->marca\",\"$this->id_tipo\")";
+		$sql = "insert into tipo (nombre) ";
+		$sql .= "value (\"$this->nombre\)";
 		return Executor::doit($sql);
 	}
-
-
-
-
 
 
 	public static function delById($id){
@@ -40,9 +32,9 @@ class VehiculoData
 	
 
 	public static function getById($id){
-		$sql = "select * from vehiculo where id='".$id."'";
+		$sql = "select * from tipo where id='".$id."'";
 		$query = Executor::doit($sql);
-		return Model::one($query[0],new VehiculoData());
+		return Model::one($query[0],new TipoData());
 
 	}
 
@@ -50,14 +42,14 @@ class VehiculoData
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new VehiculoData());
+		return Model::many($query[0],new TipoData());
 	}
 
 	
 	public static function getLike($q){
 		$sql = "select * from ".self::$tablename." where id_empresa like '%$q%' or placa like '%$q%'";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new VehiculoData());
+		return Model::many($query[0],new TipoData());
 
 	}
 

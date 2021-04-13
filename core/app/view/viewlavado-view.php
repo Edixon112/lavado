@@ -26,6 +26,7 @@ $lavados=LavadoData::getAll();
                                        <th>Fecha de entrada</th>
                                        <th>ID cliente</th>
                                        <th>ID vehiculo</th>
+                                       <th>Estado del Lavado</th>
                                        <th> </th>
                                     </tr>
                                  </thead>
@@ -44,9 +45,10 @@ $lavados=LavadoData::getAll();
                                        <td><?php echo $lavado->fechadeentrada; ?></td>
                                        <td><?php echo $cliente->nombre; ?></td>
                                        <td><?php echo $vehiculo->placa; ?></td>
+                                       <td><?php echo "en proceso de lavado" ?></td>
                                        <td class="text-right table-actions">
                                           <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
-                                          <a class="table-action  mg-r-10" href=""><i class="fa fa-trash"></i></a>
+                                          <a class="table-action  mg-r-10" href="#"><i class="fa fa-trash"></i></a>
                                           <span class="dropdown-toggle " data-toggle="dropdown"></span>
                                           <div class="dropdown-menu dropdown-menu-right">
                                              <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
@@ -56,7 +58,33 @@ $lavados=LavadoData::getAll();
                                        </td>
                                     </tr>
                                     <?php 
+                                } else {
+                                 $cliente=ClienteData::getById($lavado->idcliente);
+                                 $vehiculo=VehiculoData::getById($lavado->idvehiculo);
+                            ?>
+ 
+                                     <tr>
+                                        <td><?php echo $lavado->id;  ?></td>
+                                        <td><?php echo $lavado->fechadeentrada; ?></td>
+                                        <td><?php echo $cliente->nombre; ?></td>
+                                        <td><?php echo $vehiculo->placa; ?></td>
+                                        <td><?php echo "Vehiculo lavado" ?></td>
+                                        <td class="text-right table-actions">
+                                           <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
+                                           <a class="table-action  mg-r-10" href="#"><i class="fa fa-trash"></i></a>
+                                           <span class="dropdown-toggle " data-toggle="dropdown"></span>
+                                           <div class="dropdown-menu dropdown-menu-right">
+                                              <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
+                                              <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
+                                           </div>
+                                        </td>
+                                     </tr>
+                                     <?php 
+
+
                                 }
+                                 
                                     endforeach;
                                     ?>
                   
@@ -67,6 +95,7 @@ $lavados=LavadoData::getAll();
                                        <th>fecha de entrada </th>
                                        <th>ID Cliente</th>
                                        <th>ID Vehiculo</th>
+                                       <th>Estado del Lavado</th>
                                        <th> </th>
                                     </tr>
                                  </tfoot>
