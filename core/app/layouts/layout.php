@@ -61,35 +61,34 @@
                <div class="page-sidebar-menu">
                   <ul class="accordion-menu">
                      <li>
-                         <a href="#"><i data-feather="home"></i>
-                         <span>Menu Autolavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                      <li>
-                         <a href="#"><i data-feather="grid"></i>
-                         <span>Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                         <ul class="sub-menu">
-                            <li><a href="index.php?view=addvehiculo">añadir vehiculo</a></li>
-                            <li><a href="index.php?view=viewvehiculo">ver vehiculo</a></li>
-                         </ul>
-                      </li>
-                      <li>
-                           <a href="#"><i data-feather="grid"></i>
+                         
+                        <li>
+                           <a href="#"><i data-feather="truck"></i>
+                           <span>Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=addvehiculo">añadir vehiculo</a></li>
+                              <li><a href="index.php?view=viewvehiculo">ver vehiculo</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#"><i data-feather="user"></i>
                            <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                            <li><a href="index.php?view=addcliente">añadir cliente</a></li>
-                            <li><a href="index.php?view=viewcliente">ver cliente</a></li>
+                              <li><a href="index.php?view=addcliente">añadir cliente</a></li>
+                              <li><a href="index.php?view=viewcliente">ver cliente</a></li>
                            </ul>
-                      </li>
-                      <li>
-                         <a href="#"><i data-feather="grid"></i>
-                         <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                         <ul class="sub-menu">
+                        </li>
+                        <li>
+                           <a href="#"><i data-feather="cloud-drizzle"></i>
+                           <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
                             <li><a href="index.php?view=addlavado">añadir lavado</a></li>
                             <li><a href="index.php?view=viewlavado">ver lavado</a></li>
                             <li><a href="index.php?view=viewcalendario">ver calendario</a></li>
                          </ul>
                       </li>
                       <li>
-                         <a href="#"><i data-feather="grid"></i>
+                         <a href="#"><i data-feather="tag"></i>
                          <span>precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
                             <li><a href="index.php?view=addprecio">añadir precio</a></li>
@@ -97,7 +96,7 @@
                          </ul>
                       </li>
                       <li>
-                         <a href="#"><i data-feather="grid"></i>
+                         <a href="#"><i data-feather="list"></i>
                          <span>tipo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
                             <li><a href="index.php?view=addtipo">añadir tipo</a></li>

@@ -52,6 +52,13 @@ class LavadoData
 
 	}
 
+	public static function getByIdVehiculo($id){
+		$sql = "select * from lavado where idvehiculo='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new LavadoData());
+
+	}
+
 
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename." order by id desc";

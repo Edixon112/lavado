@@ -33,11 +33,23 @@
          <?php 
          $vehiculos=VehiculoData::getAll();
 
-         foreach ($vehiculos as $vehiculo) { ?>                
+         foreach ($vehiculos as $vehiculo) { 
+            $lavado=LavadoData::getByIdVehiculo($vehiculo->id);
+            
+
+            
+
+            
+            if($lavado->estado==1){
+            ?>                
 
          <option   value="<?php echo $vehiculo->id;?>" ><?php echo $vehiculo->placa;?></option>
          
-         <?php } ?>
+         <?php } 
+            
+         
+      }
+         ?>
                      
             </select>
    </div>

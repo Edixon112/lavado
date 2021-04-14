@@ -1,14 +1,7 @@
 <?php
-$nombre=$_POST["nombre"];
 
-$tipo= new TipoData();
-
-$tipo->nombre=$nombre;
-
-$aux=$tipo->add();
+delById($_GET["id"]);
 
 print "<script>window.location='index.php?view=viewtipo';</script>";//redireccion al index
-
-
 
 ?>

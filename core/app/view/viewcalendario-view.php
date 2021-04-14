@@ -1,100 +1,99 @@
-      <!-- BTC/ETH/DASH Start -->
-                     <!--================================-->	                     
-                     <div class="col-lg-8">
-                        <div class="card mg-b-20">
-                           <div class="card-header">
-                              <h4 class="card-header-title">
-                                 BTC/ETH/DASH
-                              </h4>
-                              <div class="card-header-btn">
-                                 <a href="#" data-toggle="collapse" class="btn card-collapse" data-target="#BtcEthDesh" aria-expanded="true"><i class="ion-ios-arrow-down"></i></a>
-                                 <a href="#" data-toggle="refresh" class="btn card-refresh"><i class="ion-android-refresh"></i></a>
-                                 <a href="#" data-toggle="expand" class="btn card-expand"><i class="ion-android-expand"></i></a>
-                                 <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
-                              </div>
-                           </div>
-                           <div class="collapse show" id="BtcEthDesh">
-                              <div class="card-body pd-t-0 pd-b-20">
-                                 <div class="row row-xs clearfix">
 
-                                    <div class="col-sm-12 col-md-4 pd-y-15 pd-md-y-25 pd-xl-y-30 d-flex align-items-center justify-content-center">
-                                       <div class="media align-items-center">
-                                          <div class="wd-45 wd-md-50 ht-45 ht-md-50 card-icon-warning mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded">
-                                             <i class="cf cf-btc tx-warning tx-30"></i>
-                                          </div>
-                                          <div>
-                                             <span class="tx-uppercase tx-10 tx-gray-500 mg-b-0">Bitcoin Price (BTC)</span>
-                                             <h4 class="tx-dark tx-20 mg-b-0 tx-rubik tx-normal">
-                                                <span class="counter">hjndijnsdcsdi</span>
-                                                <span class="tx-10 mg-b-0 tx-success">sdhbchdbsndasjndias</span>
-                                             </h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 pd-y-15 pd-md-y-25 pd-xl-y-30 d-flex align-items-center justify-content-center">
-                                       <div class="media align-items-center">
-                                          <div class="wd-45 wd-md-50 ht-45 ht-md-50 card-icon-primary mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded">
-                                             <i class="cf cf-eth tx-primary tx-30"></i>
-                                          </div>
-                                          <div>
-                                             <span class="tx-uppercase tx-10 tx-gray-500 mg-b-0">Ethereum Price (ETH)</span>
-                                             <h4 class="tx-dark tx-20 mg-b-0 tx-rubik tx-normal">
-                                                <span class="counter">32.400800</span>
-                                                <span class="tx-10 mg-b-0 tx-danger">-$352(5.60%)</span>
-                                             </h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-4 pd-y-15 pd-md-y-25 pd-xl-y-30 d-flex align-items-center justify-content-center">
-                                       <div class="media align-items-center">
-                                          <div class="wd-45 wd-md-50 ht-45 ht-md-50 card-icon-danger mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded">
-                                             <i class="cf cf-dash tx-danger tx-30"></i>
-                                          </div>
-                                          <div>
-                                             <span class="tx-uppercase tx-10 tx-gray-500 mg-b-0">Dash Coin Price (DASH)</span>
-                                             <h4 class="tx-dark tx-20 mg-b-0 tx-rubik tx-normal">
-                                                <span class="counter">23.200100</span>
-                                                <span class="tx-10 mg-b-0 tx-success">+$350(5.40%)</span>
-                                             </h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div id="btcEthDashChart"></div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!--/BTC/ETH/DASH End -->
-                     <!-- Footer Script -->
-      <!--================================-->
-      <script src="assets/plugins/jquery/jquery.min.js"></script>
-      <script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
-      <script src="assets/plugins/popper/popper.js"></script>
-      <script src="assets/plugins/feather-icon/feather.min.js"></script>
-      <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-      <script src="assets/plugins/pace/pace.min.js"></script>
-      <script src="assets/plugins/toastr/toastr.min.js"></script>
-      <script src="assets/plugins/countup/counterup.min.js"></script>		
-      <script src="assets/plugins/waypoints/waypoints.min.js"></script>
-      <script src="assets/plugins/webticker/jquery.webticker.min.js"></script>
-      <script src="assets/plugins/apex-chart/apexcharts.min.js"></script>
-      <script src="assets/plugins/apex-chart/ohlc.js"></script>
-      <script src="assets/plugins/clipboard/clipboard.min.js"></script>
-      <script src="assets/plugins/simpler-sidebar/jquery.simpler-sidebar.min.js"></script>
-      <script src="assets/js/dashboard/cryptocurrency-dashboard-init.js"></script>
-      <script src="assets/js/jquery.slimscroll.min.js"></script>
-      <script src="assets/js/highlight.min.js"></script>
-      <script src="assets/js/app.js"></script>
-      <script src="assets/js/custom.js"></script>
-      <script>
-         var clipboard = new ClipboardJS('.btn');
-         
-         clipboard.on('success', function(e) {
-         	console.log(e);
-         });
-         
-         clipboard.on('error', function(e) {
-         	console.log(e);
-         });
-      </script>
+<meta charset='utf-8' />
+<link href='assets/plugins/fullcalendar2/lib/main.css' rel='stylesheet' />
+<script src='assets/plugins/fullcalendar2/lib/main.js'></script>
+<script src='assets/plugins/fullcalendar2/lib/locales/es.js'></script>
+
+<?php
+ $thejson = null;
+ $lavados = LavadoData::getAll();
+
+  foreach($lavados as $lavado){
+    $vehiculo=VehiculoData::getById($lavado->idvehiculo);
+    $cliente=ClienteData::getById($lavado->idcliente);
+    $thejson[] = array("id"=>$lavado->id,"title"=>$vehiculo->placa."T".$cliente->nombre,"url"=>"#","start"=>$lavado->fechadeentrada,"end"=>$lavado->fechadesalida,"className"=>"bg-teal");
+  }
+?>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+    
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      },
+   
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      selectable: true,
+      nowIndicator: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events:  <?php echo json_encode($thejson); ?>,
+
+      eventClick: function(arg) {
+       
+        if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event.id)) {
+          
+          window.location='index.php?view=Proceso/Like_Proceso2&id='+arg.event.id;
+        
+        }
+      },
+    });
+
+    calendar.render();
+  });
+
+</script>
+<style>
+
+  html, body {
+    margin: 0px 0px;
+    padding: 0;
+   
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  #calendar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  
+  #calendar {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+
+  .fc-header-toolbar {
+    /*
+    the calendar will be butting up against the edges,
+    but let's scoot in the header's buttons
+    */
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  </style>
+  <div class="row row-xs clearfix">
+    <div class="col-12">
+      <div class="card mg-t-20 mg-b-20">
+        <div class="card-body">
+          <!--================================-->
+          <!-- calendar Start -->
+          <!--================================-->
+          <div id='calendar'></div>
+          <!--/ calendar End -->
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>  

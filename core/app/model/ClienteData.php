@@ -31,6 +31,7 @@ class ClienteData
 		$sql = "delete from ".self::$tablename." where id=$id";
 		return	Executor::doit($sql);
 	}
+	
 	public function del(){
 		$sql = "delete from ".self::$tablename." where id=$this->id";
 		return	Executor::doit($sql);

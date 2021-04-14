@@ -7,15 +7,15 @@ class PrecioData
 	public function PrecioData(){
 		$this->id = "";
         $this->id_tipo = "";  
-		$this->nombre = "";
+		$this->precio= "";
 	} 
 
    
 
 
 	public function add(){
-		$sql = "insert into precio (nombre,id_tipo) ";
-		$sql .= "value (\"$this->nombre\",\"$this->id_tipo\")";
+		$sql = "insert into precio (id_tipo,precio) ";
+		$sql .= "value (\"$this->id_tipo\",\"$this->precio\")";
 		return Executor::doit($sql);
 	}
 
@@ -34,6 +34,13 @@ class PrecioData
 
 	public static function getById($id){
 		$sql = "select * from precio where id='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new PrecioData());
+
+	}
+
+	public static function getByIdTipo($id){
+		$sql = "select * from precio where id_tipo='".$id."'";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new PrecioData());
 

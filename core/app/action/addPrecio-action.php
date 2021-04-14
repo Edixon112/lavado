@@ -1,15 +1,15 @@
 <?php
-$id_tipo=$_POST["id_tipo"];
+$id_tipo=$_POST["tipo"];
 $precio=$_POST["precio"];
 
-$precio= new PrecioData();
+$precios= new PrecioData();
 
-$precio->id_tipo=$id_tipo;
-$precio->precio=$precio;
+$precios->id_tipo=$id_tipo;
+$precios->precio=$precio;
 
-$aux=$precio->add();
+$aux=$precios->add();
 
-print "<script>window.location='index.php?';</script>";//redireccion al index
+print "<script>window.location='index.php?view=viewprecio';</script>";//redireccion al index
 
 
 
