@@ -62,45 +62,45 @@
                   <ul class="accordion-menu">
                      <li>
                          
+                        <li> 
+                           <a href="#"><i data-feather="user"></i>
+                           <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente</a></li>
+                              <li><a href="index.php?view=Cliente/ViewCliente">Ver cliente</a></li>
+                           </ul>
+                        </li>
                         <li>
                            <a href="#"><i data-feather="truck"></i>
                            <span>Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=addvehiculo">añadir vehiculo</a></li>
-                              <li><a href="index.php?view=viewvehiculo">ver vehiculo</a></li>
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#"><i data-feather="user"></i>
-                           <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                           <ul class="sub-menu">
-                              <li><a href="index.php?view=addcliente">añadir cliente</a></li>
-                              <li><a href="index.php?view=viewcliente">ver cliente</a></li>
+                              <li><a href="index.php?view=Vehiculo/AddVehiculo">Añadir vehiculo</a></li>
+                              <li><a href="index.php?view=Vehiculo/ViewVehiculo">Ver vehiculo</a></li>
                            </ul>
                         </li>
                         <li>
                            <a href="#"><i data-feather="cloud-drizzle"></i>
                            <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                            <li><a href="index.php?view=addlavado">añadir lavado</a></li>
-                            <li><a href="index.php?view=viewlavado">ver lavado</a></li>
-                            <li><a href="index.php?view=viewcalendario">ver calendario</a></li>
-                         </ul>
-                      </li>
-                      <li>
+                            <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado</a></li>
+                            <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado</a></li>
+                            <li><a href="index.php?view=Lavado/ViewcaLendario">Ver calendario</a></li>
+                        </li>
+                        </ul>
+                       <li>
                          <a href="#"><i data-feather="tag"></i>
-                         <span>precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                         <span>Precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
-                            <li><a href="index.php?view=addprecio">añadir precio</a></li>
-                            <li><a href="index.php?view=viewprecio">ver precio</a></li>
+                            <li><a href="index.php?view=Precio/AddPrecio">Añadir precio</a></li>
+                            <li><a href="index.php?view=Precio/ViewPrecio">Ver precio</a></li>
                          </ul>
                       </li>
                       <li>
                          <a href="#"><i data-feather="list"></i>
-                         <span>tipo</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                         <span>Tipo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
-                            <li><a href="index.php?view=addtipo">añadir tipo</a></li>
-                            <li><a href="index.php?view=viewtipo">ver tipo</a></li>
+                            <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo</a></li>
+                            <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo</a></li>
                          </ul>
                       </li>
                      </li>
@@ -469,7 +469,7 @@
                <!-- Main Wrapper Start -->
                <!--==============LAS LLAMADAS A LOS DEMAS==================-->
                		
-                <?php   View::load("addvehiculo"); ?>
+                <?php   View::load("ViewCliente"); ?>
 
                <!--/ Main Wrapper End -->
                </div>

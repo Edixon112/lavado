@@ -5,7 +5,7 @@ $vehiculo= VehiculoData::delById($_GET["id"]);
 
 
 
-print "<script>window.location='index.php?view=viewvehiculo';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Vehiculo/ViewVehiculo';</script>";//redireccion al index
 
 
 ?>

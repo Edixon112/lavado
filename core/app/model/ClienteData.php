@@ -7,32 +7,35 @@ class ClienteData
 
 
 	public function ClienteData(){
-		$this->id = ""; 
+		$this->id = "";
 		$this->nombre = "";
         $this->apellido = "";
         $this->cc = "";
+		$this->celular = ""; 
 	} 
 
    
-
-
 	public function add(){
-		$sql = "insert into cliente (nombre,apellido,cc) ";
-		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\")";
+		$sql = "insert into cliente (nombre,apellido,cc,celular) ";
+		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\",\"$this->celular\")";
 		return Executor::doit($sql);
 	}
 
-	// partiendo de que ya tenemos creado un objeto ClienteData
-	public function update(){//METODO PARA ACTUALIZAR LA INFORMACION
+
+	public function update(){
 		$sql = "update cliente set 
-		tipo='".$this->tipo."',
 		nombre='".$this->nombre."',
-		nit_ced='".$this->nit_ced."',
-		email='".$this->email."',
-		contacto='".$this->contacto."'
-		
+		apellido='".$this->apellido."',
+		cc='".$this->cc."',
+		celular'".$this->celular."'
 		where id='".$this->id."'";
 		return	Executor::doit($sql);
+	}
+
+	public function update2(){
+		$sql = "update ".self::$tablename." set nombre=\"$this->nombre\",apellido=\"$this->apellido\"
+		,cc=\"$this->cc\",celular=\"$this->celular\" where id=$this->id";
+		return Executor::doit($sql);
 	}
 
 

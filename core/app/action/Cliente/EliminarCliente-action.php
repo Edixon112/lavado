@@ -1,10 +1,9 @@
 <?php 
 
-$cliente= ClienteData::delById($_GET["id"]);
+$cliente=ClienteData::delById($_GET["id"]);
 
 
-
-print "<script>window.location='index.php?view=viewcliente';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Cliente/ViewCliente';</script>";
 
 
 ?>

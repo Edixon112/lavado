@@ -8,7 +8,7 @@ $lavado->update();
 
 
 
-print "<script>window.location='index.php?view=viewlavado';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Lavado/viewlavado';</script>";//redireccion al index
 
 
 ?>
