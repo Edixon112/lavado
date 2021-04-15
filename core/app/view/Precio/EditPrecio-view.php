@@ -16,29 +16,20 @@
 	 			</div>
 				<div class="card-body collapse show" id="collapse4">
 				<?php 
-				$Vehiculos = VehiculoData::getById($_GET["id"]); 
+				$precios = PrecioData::getById($_GET["id"]); 
 				?>
-					<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Vehiculo/EditVehiculo" role="form">
+					<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Precio/EditPrecio" role="form">
 						<div class="row">
                         <!--info oculta-->
-						<input type="text" style="display: none" name="id" id="id" value="<?php echo $Vehiculos->id;?>" readonly="true"  required /> 
+						<input type="text" style="display: none" name="id" id="id" value="<?php echo $precios->id;?>" readonly="true"  required /> 
 
 							<div class="col-md-6 mb-3">
-								<p>Placa</p>
+								<p>Nuevo Precio a Colocar</p>
 								<div class="input-group mb-6">
 										<!-- <div class="input-group-prepend">
 										<span class="input-group-text" id="basic-addon3"><i class="fa fa-user"></i></span>
 									</div> -->
-									<input type="text" class="form-control" name="placa"value="<?php echo $Vehiculos->placa; ?>" id="placa" placeholder="Username" aria-label="Username" aria-describedby="basic-addon3">
-		             			</div>	
-							</div>
-							<div class="col-md-6 mb-3">
-								<p>Marca</p>
-								<div class="input-group mb-6">
-										<!-- <div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon3"><i class="fa fa-user"></i></span>
-									</div> -->
-									<input type="text" class="form-control" name="marca"value="<?php echo $Vehiculos->marca; ?>" id="marca" placeholder="marca" aria-label="Apellido" aria-describedby="basic-addon3">
+									<input type="text" class="form-control" name="precio"value="<?php echo $precios->precio; ?>" id="precio" placeholder="Username" aria-label="Username" aria-describedby="basic-addon3">
 		             			</div>	
 							</div>
 	 						<div class="col-md-6 mb-3">

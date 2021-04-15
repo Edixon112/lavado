@@ -7,7 +7,7 @@ $tipo->nombre=$nombre;
 
 $aux=$tipo->add();
 
-print "<script>window.location='index.php?view=viewtipo';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Tipo/ViewTipo';</script>";//redireccion al index
 
 
 

@@ -9,7 +9,7 @@ $precios->precio=$precio;
 
 $aux=$precios->add();
 
-print "<script>window.location='index.php?view=viewprecio';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Precio/ViewPrecio';</script>";//redireccion al index
 
 
 

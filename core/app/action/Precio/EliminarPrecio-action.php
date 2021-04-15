@@ -4,7 +4,7 @@ $precio= PrecioData::delById($_GET["id"]);
 
 
 
-print "<script>window.location='index.php?view=viewprecio';</script>";//redireccion al index
+print "<script>window.location='index.php?view=Precio/ViewPrecio';</script>";//redireccion al index
 
 
 ?>

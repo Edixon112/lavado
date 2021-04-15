@@ -7,10 +7,12 @@ class TipoData
 	public function TipoData(){
 		$this->id = ""; 
 		$this->nombre = "";
-		$this->id_tipo="";
 	} 
 
-   
+	public function update2(){
+		$sql = "update ".self::$tablename." set nombre=\"$this->nombre\" where id=$this->id";
+		return Executor::doit($sql);
+	}
 
 
 	public function add(){

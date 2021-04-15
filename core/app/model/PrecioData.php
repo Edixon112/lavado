@@ -10,7 +10,11 @@ class PrecioData
 		$this->precio= "";
 	} 
 
-   
+
+	public function update2(){
+		$sql = "update ".self::$tablename." set id_tipo=\"$this->id_tipo\",precio=\"$this->precio\" where id=$this->id";
+		return Executor::doit($sql);
+	}
 
 
 	public function add(){

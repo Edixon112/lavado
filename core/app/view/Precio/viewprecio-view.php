@@ -33,8 +33,8 @@
                      <td><?php echo $tipo->nombre; ?></td>
                      <td><?php echo $precio->precio; ?></td>
                      <td class="text-right table-actions">
-                        <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
-                        <a class="table-action  mg-r-10" href="index.php?action=EliminarPrecio&id=<?php echo $precio->id?>"><i class="fa fa-trash"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?view=Precio/EditPrecio&id=<?php echo $precio->id?>"><i class="fa fa-pencil"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?action=Precio/EliminarPrecio&id=<?php echo $precio->id?>"><i class="fa fa-trash"></i></a>
                         <span class="dropdown-toggle " data-toggle="dropdown"></span>
                         <div class="dropdown-menu dropdown-menu-right">
                            <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
