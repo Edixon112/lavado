@@ -13,7 +13,7 @@ echo $lavado->fechadeentrada=date("Y-m-d H:i:s");
 
 $aux=$lavado->add();
 
-print "<script>window.location='index.php?';</script>";//redireccion al index
+
 
 
 

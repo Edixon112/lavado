@@ -36,7 +36,7 @@
                      <td><?php echo $vehiculo->marca; ?></td>
                      <td><?php echo $tipo->nombre; ?></td>
                      <td class="text-right table-actions">
-                        <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?action=ModificarVehiculo"><i class="fa fa-pencil"></i></a>
                         <a class="table-action  mg-r-10" href="index.php?action=Eliminar_Vehiculo&id=<?php echo $vehiculo->id?>"><i class="fa fa-trash"></i></a>
                         <span class="dropdown-toggle " data-toggle="dropdown"></span>
                         <div class="dropdown-menu dropdown-menu-right">

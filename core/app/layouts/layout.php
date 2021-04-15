@@ -803,7 +803,7 @@
       <!--================================-->
       <!-- Demo Sidebar Start -->
       <!--================================-->	  
-      <div class="setting-sidebar" id="demoSettingSidebar">
+      <!-- <div class="setting-sidebar" id="demoSettingSidebar">
          <div class="wrapper" id="demoSettingSidebarScroll">
             <a class="demo-settings-icon" id="demoSettingSidebarTrigger" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="icon-settings tx-16"></i>
@@ -815,9 +815,9 @@
                <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#nav-frontend">Frontend</a>
                </li>
-            </ul>
+            </ul> -->
             <!-- Backend Dashboard -->
-            <div class="tab-content">
+           <!-- <div class="tab-content">
                <div class="tab-pane fade active show" id="nav-dashboard">
                   <div class="mg-y-30 tx-center bd">
                      <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Default Version</h5>
@@ -850,9 +850,9 @@
                   <div class="mg-y-30">						
                      <a href="http://themeforest.net/item/metrical-multipurpose-bootstrap4-admin-dashboard-template/24250418" target="_blank" class="btn btn-lg btn-primary btn-block">Download Now</a>
                   </div>
-               </div>
+               </div> -->
                <!-- Frontend Templates -->
-               <div class="tab-pane fade" id="nav-frontend">
+               <!--<div class="tab-pane fade" id="nav-frontend">
                   <div class="mg-y-30 tx-center bd">
                      <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Ecommerce</h5>
                      <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
@@ -915,7 +915,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <!--/ Demo Sidebar End  -->
       <!--================================-->
       <!-- Footer Script -->

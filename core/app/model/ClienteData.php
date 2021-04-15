@@ -22,9 +22,18 @@ class ClienteData
 		return Executor::doit($sql);
 	}
 
-
-
-
+	// partiendo de que ya tenemos creado un objeto ClienteData
+	public function update(){//METODO PARA ACTUALIZAR LA INFORMACION
+		$sql = "update cliente set 
+		tipo='".$this->tipo."',
+		nombre='".$this->nombre."',
+		nit_ced='".$this->nit_ced."',
+		email='".$this->email."',
+		contacto='".$this->contacto."'
+		
+		where id='".$this->id."'";
+		return	Executor::doit($sql);
+	}
 
 
 	public static function delById($id){
