@@ -469,7 +469,7 @@
                <!-- Main Wrapper Start -->
                <!--==============LAS LLAMADAS A LOS DEMAS==================-->
                		
-                <?php   View::load("ViewCliente"); ?>
+                <?php   View::load("Cliente/viewcliente"); ?>
 
                <!--/ Main Wrapper End -->
                </div>
