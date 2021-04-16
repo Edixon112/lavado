@@ -1,4 +1,3 @@
-<?php    $lavados=LavadoData::getAll();    ?>
 <!-- Scrollable Table Start -->
    <div class="col-md-12 col-lg-12">
       <div class="card mg-b-20">
@@ -27,6 +26,9 @@
                </thead>
                <tbody>
                   <?php
+
+                     $lavados=LavadoData::getAll(); 
+
                      foreach($lavados as $lavado):
                         if($lavado->estado==0){
                            $cliente=ClienteData::getById($lavado->idcliente);
@@ -39,11 +41,11 @@
                      <td><?php echo $vehiculo->placa; ?></td>
                      <td><?php echo "en proceso de lavado" ?></td>
                      <td class="text-right table-actions">
-                        <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
-                        <a class="table-action  mg-r-10" href="index.php?action=EliminarLavado&id=<?php echo $lavado->id?>"><i class="fa fa-trash"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?view=Lavado/EditLavado&id=<?php echo $lavado->id?>"><i class="fa fa-pencil"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?action=Lavado/EliminarLavado&id=<?php echo $lavado->id?>"><i class="fa fa-trash"></i></a>
                         <span class="dropdown-toggle " data-toggle="dropdown"></span>
                         <div class="dropdown-menu dropdown-menu-right">
-                           <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
+                           <a class="dropdown-item" href="index.php?action=Lavado/SalidaVehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
                            <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
                            <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
                         </div>
@@ -61,11 +63,11 @@
                      <td><?php echo $vehiculo->placa; ?></td>
                      <td><?php echo "Vehiculo lavado" ?></td>
                      <td class="text-right table-actions">
-                        <a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
-                        <a class="table-action  mg-r-10" href="#"><i class="fa fa-trash"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?view=Lavado/EditLavado&id=<?php echo $lavado->id?>"><i class="fa fa-pencil"></i></a>
+                        <a class="table-action  mg-r-10" href="index.php?action=Lavado/EliminarLavado&id=<?php echo $lavado->id?>"><i class="fa fa-trash"></i></a>
                         <span class="dropdown-toggle " data-toggle="dropdown"></span>
                         <div class="dropdown-menu dropdown-menu-right">
-                           <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
+                           <a class="dropdown-item" href="index.php?action=Lavado/SalidaVehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
                            <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
                            <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
                         </div>

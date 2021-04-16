@@ -12,16 +12,23 @@ class LavadoData
         $this->fechadesalida = "";
 		$this->idcliente = "";
         $this->idvehiculo = "";
-		$this->estado="";
+		$this->estado = "";
       
 	} 
 
-	public function update(){//ACTUALIZAR LOS ATRIBUTOS DIRECTAMENTE EN LA BASE DE DATOS 
-		$sql = "update lavado set
-		estado='".$this->estado."', 
-		fechadesalida='".$this->fechadesalida."'
-		where id='".$this->id."'";
-		return	Executor::doit($sql);
+	public function update1(){
+		$sql = "update ".self::$tablename."set idcliente=\"$this->idcliente\",idvehiculo=\"$this->idvehiculo\" where id=$this->id";
+		return Executor::doit($sql);
+	}
+
+	public function update2(){
+		$sql = "update lavado set idvehiculo='".$this->idvehiculo."',idcliente='".$this->idcliente."',estado='".$this->estado."' where id='".$this->id."'";
+		return Executor::doit($sql);
+	}
+
+	public function update(){
+		$sql = "update lavado set estado='".$this->estado."',fechadesalida='".$this->fechadesalida."' where id='".$this->id."'";
+		return Executor::doit($sql);
 	}
 
 

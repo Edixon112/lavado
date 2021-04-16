@@ -11,7 +11,7 @@ $vehiculo->id_tipo=$tipo;
 
 $aux=$vehiculo->add();
 
-print "<script> window.location='index.php?view=viewvehiculo'; </script>";//redireccion al index
+print "<script> window.location='index.php?view=Vehiculo/ViewVehiculo';</script>";
 
 
 ?>
