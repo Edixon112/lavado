@@ -29,5 +29,4 @@ $options = stream_context_create(['http' => [
 $result = file_get_contents($url, false, $options);
 
 print "<script>window.location='index.php?view=Lavado/ViewLavado';</script>";
-
 ?>
