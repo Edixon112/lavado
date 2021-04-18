@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-04-2021 a las 04:44:50
+-- Tiempo de generación: 18-04-2021 a las 20:53:00
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 7.4.16
 
@@ -40,8 +40,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nombre`, `apellido`, `cc`, `celular`) VALUES
-(2, 'v¿benjamin', 'jinez', 0, 1234),
-(6, 'Ar', 'araujo', 27590364, 2147483647),
+(2, 'benjamin', 'jinez', 0, 1234),
 (7, 'edixon', 'Araujo', 22, 33333333),
 (9, 'Douglas', 'Araujo', 27590364, 2147483647),
 (10, 'Emily', 'Araujo', 2312324, 2147483647),
@@ -70,8 +69,9 @@ CREATE TABLE `lavado` (
 INSERT INTO `lavado` (`id`, `fechadeentrada`, `fechadesalida`, `idcliente`, `idvehiculo`, `estado`) VALUES
 (17, '2021-04-15 19:41:36', '2021-04-15 20:30:39', 13, 24, 1),
 (18, '2021-04-15 20:06:23', '2021-04-15 20:29:59', 12, 21, 1),
-(19, '2021-04-15 20:06:33', '0000-00-00 00:00:00', 7, 13, 0),
-(20, '2021-04-15 20:06:44', '0000-00-00 00:00:00', 9, 21, 0);
+(19, '2021-04-15 20:06:33', '2021-04-15 21:49:11', 7, 13, 1),
+(20, '2021-04-15 20:06:44', '2021-04-18 13:32:17', 9, 21, 1),
+(21, '2021-04-18 13:30:22', '0000-00-00 00:00:00', 2, 22, 0);
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,8 @@ INSERT INTO `precio` (`id`, `id_tipo`, `precio`) VALUES
 (3, 10, 80000),
 (4, 1, 30000),
 (5, 11, 60000),
-(9, 1, 30000);
+(9, 1, 30000),
+(11, 12, 100000);
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,8 @@ INSERT INTO `tipo` (`id`, `nombre`) VALUES
 (1, 'moto'),
 (3, 'carro'),
 (10, 'Gandola'),
-(11, 'camion');
+(11, 'camion'),
+(12, 'Trailer');
 
 -- --------------------------------------------------------
 
@@ -196,19 +198,19 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `lavado`
 --
 ALTER TABLE `lavado`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `precio`
 --
 ALTER TABLE `precio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `vehiculo`
