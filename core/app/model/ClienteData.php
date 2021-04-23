@@ -11,13 +11,14 @@ class ClienteData
 		$this->nombre = "";
         $this->apellido = "";
         $this->cc = "";
-		$this->celular = ""; 
+		$this->celular = "";
+		$this->activo = ""; 
 	} 
 
    
 	public function add(){
-		$sql = "insert into cliente (nombre,apellido,cc,celular) ";
-		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\",\"$this->celular\")";
+		$sql = "insert into cliente (nombre,apellido,cc,celular,activo) ";
+		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\",\"$this->celular\",\"$this->activo\")";
 		return Executor::doit($sql);
 	}
 
@@ -58,6 +59,14 @@ class ClienteData
 		return Model::one($query[0],new ClienteData());
 
 	}
+
+	public static function getByCC($cedula){
+		$sql = "select * from cliente where cc='".$cedula."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new ClienteData());
+
+	}
+
 
 
 	public static function getAll(){

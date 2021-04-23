@@ -1,11 +1,12 @@
 <?php
 
-$lavado=LavadoData::getById($_GET["id"]);
+
+/*$lavado=LavadoData::getById($_POST["id"]);
 $idclientes=$lavado->idcliente;
 $idvehiculos=$lavado->idvehiculo;
-$cliente=ClienteData::getById($idclientes);
+$cliente=ClienteData::getById($POST_["idclientes"]);
 $nombre=$cliente->nombre;
-$vehiculo=VehiculoData::getById($idvehiculos);
+$vehiculo=VehiculoData::getById($POST_["idvehiculos"]);
 $placa=$vehiculo->placa;
 
 $data = [
@@ -28,5 +29,5 @@ $options = stream_context_create(['http' => [
 // Send a request
 $result = file_get_contents($url, false, $options);
 
-print "<script>window.location='index.php?view=Lavado/ViewLavado';</script>";
+print "<script>window.location='index.php?view=Lavado/ViewLavado';</script>";*/
 ?>

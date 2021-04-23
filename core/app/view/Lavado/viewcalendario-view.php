@@ -38,7 +38,7 @@
        
         if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event.id)) {
           
-          window.location='index.php?view=Proceso/Like_Proceso2&id='+arg.event.id;
+          window.location='index.php?view=Lavado/LikeLavado&id='+arg.event.id;
         
         }
       },

@@ -29,6 +29,10 @@
       <link type="text/css" rel="stylesheet" href="assets/css/app.min.css"/>
       <link type="text/css" rel="stylesheet" href="assets/css/style.min.css"/>
       <link type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-select/css/bootstrap-select.min.css">
+
+      <link type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css"><!-- boos de tiempo xd-->
+      <link type="text/css" rel="stylesheet" href="assets/plugins/datepicker/css/datepicker.min.css"><!-- este tiempo-->
+      
       <!-- Favicon -->	
       <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,8 +70,10 @@
                            <a href="#"><i data-feather="user"></i>
                            <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                              <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente</a></li>
-                              <li><a href="index.php?view=Cliente/ViewCliente">Ver cliente</a></li>
+                              <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente ADMIN</a></li>
+                              <li><a href="index.php?view=Cliente/ViewCliente">Ver cliente ADMIN</a></li>
+                              <li><a href="index.php?view=Cliente/AdminViewCliente">Ver Pedido cliente ADMIN</a></li>
+                              <li><a href="index.php?view=Cliente/UserAddCliente">Ingresar cliente USER</a></li>
                            </ul>
                         </li>
                         <li>
@@ -82,25 +88,26 @@
                            <a href="#"><i data-feather="cloud-drizzle"></i>
                            <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                            <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado</a></li>
-                            <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado</a></li>
-                            <li><a href="index.php?view=Lavado/ViewcaLendario">Ver calendario</a></li>
+                            <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
+                            <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
+                            <li><a href="index.php?view=Lavado/ViewcaLendario">Ver calendario ADMIN</a></li>
+                            <li><a href="index.php?view=Lavado/UserLavado">Ingresar Cita USER</a></li>
                         </li>
                         </ul>
                        <li>
                          <a href="#"><i data-feather="tag"></i>
                          <span>Precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
-                            <li><a href="index.php?view=Precio/AddPrecio">Añadir precio</a></li>
-                            <li><a href="index.php?view=Precio/ViewPrecio">Ver precio</a></li>
+                            <li><a href="index.php?view=Precio/AddPrecio">Añadir precio ADMIN</a></li>
+                            <li><a href="index.php?view=Precio/ViewPrecio">Ver precio ADMIN</a></li>
                          </ul>
                       </li>
                       <li>
                          <a href="#"><i data-feather="list"></i>
                          <span>Tipo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
-                            <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo</a></li>
-                            <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo</a></li>
+                            <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo ADMIN</a></li>
+                            <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo ADMIN</a></li>
                          </ul>
                       </li>
                      </li>
@@ -477,13 +484,13 @@
             <!--================================-->
             <!-- Page Footer Start -->	
             <!--================================-->
-            <footer class="page-footer">
+            <!--footer class="page-footer">
                <div class="pd-t-4 pd-b-0 pd-x-20">
                   <div class="tx-10 tx-uppercase">
                      <p class="pd-y-10 mb-0">Copyright&copy; 2019 | All rights reserved. | Created By <a href="http://themeforest.net/user/colorlibcode" target="_blank">ColorlibCode</a></p>
                   </div>
                </div>
-            </footer>
+            </footer-->
             <!--/ Page Footer End -->
          </div>
          <!--/ Page Content End  -->
@@ -935,6 +942,81 @@
       <script src="assets/js/app.js"></script>
       <script src="assets/js/custom.js"></script>
       <script src="assets/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+      <script src="assets/plugins/moment/moment.min.js"></script>
+      <script src="assets/plugins/datepicker/js/datepicker.min.js"></script>
+      <script src="assets/plugins/datepicker/js/datepicker.es.js"></script>
+      <script type="text/javascript">
+         // Time Picker 1  
+         $('#timepicker1').timepicker();
+         
+         // Create start date
+         var start = new Date(),
+         prevDay,
+         startHours = 9;
+         
+         // 09:00 AM
+         start.setHours(9);
+         start.setMinutes(0);
+         
+         // If today is Saturday or Sunday set 10:00 AM
+         if ([6, 0].indexOf(start.getDay()) != -1) {
+         start.setHours(10);
+         startHours = 10
+         }
+         
+         $('#timepicker-actions-exmpl').datepicker({
+         timepicker: true,
+         language: 'en',
+         startDate: start,
+         minHours: startHours,
+         maxHours: 18,
+         onSelect: function (fd, d, picker) {
+         // Do nothing if selection was cleared
+         if (!d) return;
+         
+         var day = d.getDay();
+         
+         // Trigger only if date is changed
+         if (prevDay != undefined && prevDay == day) return;
+         prevDay = day;
+         
+         // If chosen day is Saturday or Sunday when set
+         // hour value for weekends, else restore defaults
+         if (day == 6 || day == 0) {
+         picker.update({
+         minHours: 10,
+         maxHours: 16
+         })
+         } else {
+         picker.update({
+         minHours: 9,
+         maxHours: 18
+         })
+         }
+         }
+         })
+      </script>---
+           <script>
+         // Example starter JavaScript for disabling form submissions if there are invalid fields
+         (function() {
+           'use strict';
+           window.addEventListener('load', function() {
+             // Fetch all the forms we want to apply custom Bootstrap validation styles to
+             var forms = document.getElementsByClassName('needs-validation');
+             // Loop over them and prevent submission
+             var validation = Array.prototype.filter.call(forms, function(form) {
+               form.addEventListener('submit', function(event) {
+                 if (form.checkValidity() === false) {
+                   event.preventDefault();
+                   event.stopPropagation();
+                 }
+                 form.classList.add('was-validated');
+               }, false);
+             });
+           }, false);
+         })();
+      </script>---
       <script>
          // Basic DataTable	
           $('#basicDataTable').DataTable({
