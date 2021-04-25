@@ -72,8 +72,15 @@
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente ADMIN</a></li>
                               <li><a href="index.php?view=Cliente/ViewCliente">Ver cliente ADMIN</a></li>
-                              <li><a href="index.php?view=Cliente/AdminViewCliente">Ver Pedido cliente ADMIN</a></li>
-                              <li><a href="index.php?view=Cliente/UserAddCliente">Ingresar cliente USER</a></li>
+                              <li><a href="index.php?view=User/UserAddCliente">Ingresar cliente USER</a></li>
+                           </ul>
+                        </li>
+                        <li> 
+                           <a href="#"><i data-feather="user"></i>
+                           <span>Cita</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=Cita/AdminViewCita">Ver Pedido Cliente ADMIN</a></li>
+                              <li><a href="index.php?view=Cita/UserCita">Ingresar Cita USER</a></li>
                            </ul>
                         </li>
                         <li>
@@ -91,7 +98,6 @@
                             <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
                             <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
                             <li><a href="index.php?view=Lavado/ViewcaLendario">Ver calendario ADMIN</a></li>
-                            <li><a href="index.php?view=Lavado/UserLavado">Ingresar Cita USER</a></li>
                         </li>
                         </ul>
                        <li>

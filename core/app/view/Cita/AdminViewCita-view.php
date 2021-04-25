@@ -1,4 +1,3 @@
-<?php    $cita=CitaData::GetAll();   ?>
 <!-- Scrollable Table Start -->
 <div class="col-md-12 col-lg-12">
    <div class="card mg-b-20">
@@ -13,6 +12,8 @@
             <a href="#" data-toggle="remove" class="btn card-remove"><i class="ion-android-close"></i></a>
          </div>
       </div>
+
+
       <div class="table-responsive">
          <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
             <thead class="tx-dark tx-uppercase tx-10 tx-bold">
@@ -25,9 +26,11 @@
                </tr>
             </thead>
             <tbody>
-               <?php
-                  foreach($cita as $cliente):
-                  $cliente=Cliente::GetByCC($cita->idcliente); 
+               <?php $citas=CitaData::GetAll();
+
+                  foreach($citas as $cita):
+
+                  $cliente=ClienteData::getById($cita->idcliente);              
                ?>
                <tr>
                   <td><?php echo $cita->id;  ?></td>
@@ -35,14 +38,14 @@
                   <td><?php echo $cita->fechapedida; ?></td>
                   <td><?php echo $cita->estado; ?></td>
                   <td class="text-right table-actions">
-                     <a class="table-action  mg-r-10" href="index.php?view=Cliente/EditCliente&id=<?php echo $cliente->id?>"><i class="fa fa-pencil"></i></a>
-                     <a class="table-action  mg-r-10" href="index.php?action=Cliente/EliminarCliente&id=<?php echo $cliente->id?>"><i class="fa fa-trash"></i></a>
-                     <span class="dropdown-toggle " data-toggle="dropdown"></span>
+                     <a class="table-action  mg-r-10" href="index.php?view=Cita/EditCita&id=<?php echo $cita->id?>"><i class="fa fa-pencil"></i></a>
+                     <a class="table-action  mg-r-10" href="index.php?action=Cita/EliminarCita&id=<?php echo $cita->id?>"><i class="fa fa-trash"></i></a>
+                     <!--span class="dropdown-toggle " data-toggle="dropdown"></span>
                      <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
+                        <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id="><i class="fa fa-book"></i> Salida</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
                         <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
-                     </div>
+                     </div-->
                   </td>
                </tr> 
                <?php 

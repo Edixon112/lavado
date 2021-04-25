@@ -1,4 +1,5 @@
 <?php
+
 $nombre=$_POST["nombre"];
 $apellido=$_POST["apellido"];
 $cc=$_POST["cc"];
@@ -15,6 +16,12 @@ $cliente->activo=$activo;
 
 $aux=$cliente->add();
 
-print "<script>window.location='index.php?view=Cliente/ViewCliente';</script>";
+if($cliente->ctivo==0){
 
+print "<script>window.location='index.php?view=Cita/UserCita';</script>";
+
+}else{
+
+print "<script>window.location='index.php?view=Cliente/ViewCliente';</script>";
+}
 ?>

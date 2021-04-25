@@ -11,12 +11,11 @@ class CitaData
 		$this->estado = "";
       
 	} 
-
+	
 	public function update(){
-		$sql = "update cita set idcliente='".$this->idcliente."',estado='".$this->estado."' where id='".$this->id."'";
+		$sql = "update ".self::$tablename." set fechapedida=\"$this->fechapedida\",estado=\"$this->estado\" where id=$this->id";
 		return Executor::doit($sql);
 	}
-
 
 	public function add(){
 		$sql = "insert into cita (fechapedida,idcliente,estado) ";

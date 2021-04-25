@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="card-body collapse show" id="collapse7">
-                <form class="needs-validation" action="index.php?action=Lavado/AddCitaLavado" method="post" novalidate>
+                <form class="needs-validation" action="index.php?action=Cita/AddCitaLavado" method="post" novalidate>
                     <div class="form-row"> 
                         <!--div class="col-md-4 mb-3">
                            <label for="nombre">Nombre</label>
