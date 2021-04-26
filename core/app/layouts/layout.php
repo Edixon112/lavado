@@ -53,8 +53,8 @@
          <div class="page-sidebar">
             <div class="logo">
                <a class="logo-img" href="index.php?">		
-               <img class="desktop-logo" src="assets/images/logo.png" alt="">
-               <img class="small-logo" src="assets/images/small-logo.png" alt="">
+               <img class="desktop-logo" src="assets/images/LOGOEB.jpeg" alt="">
+               <img class="small-logo" src="assets/images/EB.jpeg" alt="">
                </a>			
                <i class="ion-ios-close-empty" id="sidebar-toggle-button-close"></i>
             </div>
@@ -114,6 +114,13 @@
                          <ul class="sub-menu">
                             <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo ADMIN</a></li>
                             <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo ADMIN</a></li>
+                         </ul>
+                      </li>
+                      <li>
+                         <a href="#"><i data-feather="list"></i>
+                         <span>Factura</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                         <ul class="sub-menu">
+                            <li><a href="index.php?view=ViewFactura">Ver Factura ADMIN</a></li>
                          </ul>
                       </li>
                      </li>
