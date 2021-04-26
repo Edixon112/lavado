@@ -16,7 +16,7 @@ $cliente->activo=$activo;
 
 $aux=$cliente->add();
 
-if($cliente->ctivo==0){
+if($cliente->activo==0){
 
 print "<script>window.location='index.php?view=Cita/UserCita';</script>";
 

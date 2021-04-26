@@ -4,7 +4,7 @@
       <div class="row">
          <div class="col-md-3">
             <address>
-               <img src="assets/images/logo.png" class="img-fluid" alt="logo"><br><br>
+               <img src="assets/images/LOGOEB.jpeg" class="img-fluid" alt="logo"><br><br>
                <strong>Metrical, Inc.</strong><br>
                1355 Market St, Suite 900<br>
                San Francisco, CA 94103<br>

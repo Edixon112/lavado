@@ -41,7 +41,7 @@
 									<input type="text" class="form-control" name="apellido"value="<?php echo $clientes->apellido; ?>" id="apellido" placeholder="Apellido" aria-label="Apellido" aria-describedby="basic-addon3">
 		             			</div>	
 							</div>
-	 						<div class="col-md-6 mb-3">
+	 						<div class="col-md-5 mb-3">
 								<p>Numero de Cedula</p>
 								<div class="input-group mb-6">
 									<input type="text" class="form-control" name="cc"value="<?php echo $clientes->cc; ?>" id="cc" aria-label="Amount (to the nearest dollar)">
@@ -50,7 +50,7 @@
 									</div> -->
 								</div>
 							</div>
-							<div class="col-md-6 mb-3">
+							<div class="col-md-5 mb-3">
 								<p>Numero de Celular</p>
 								<div class="input-group mb-6">
 									<input type="text" class="form-control" name="celular" value="<?php echo $clientes->celular; ?>"id="celular" aria-label="Amount (to the nearest dollar)">
@@ -58,8 +58,15 @@
 										<span class="input-group-text">#</span>
 									</div> -->
 								</div>
-		
 							</div>
+							<div class="col-md-2 mb-3">
+                                <label for="validationCustom01">Estado</label>
+                                   <select type="text" class="form-control" name="activo" id="activo" required>
+                                     <option value="1">activo</option>
+                                     <option value="0" selected>inctivo</option>
+                                   </select>
+                                </div>
+                            </div>
 							<div class="col-md-6 mb-3">
 	  							<button class="btn btn-custom-primary" onclick="return pregunta()"  type="submit">Confirmar</button>
 							</div>

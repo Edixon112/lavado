@@ -9,6 +9,7 @@ $user->nombre=$_POST["nombre"];
 $user->apellido= $_POST["apellido"];
 $user->cc= $_POST["cc"];
 $user->celular= $_POST["celular"];
+$user->activo= $_POST["activo"];
 
 
 $variable=$user->update2();

@@ -6,8 +6,7 @@ date_default_timezone_set("America/Bogota");
 $cedula=$_POST["cc"];
 
 $cliente=ClienteData::getByCC($cedula);
-
-if ($cedula==$cliente->cc){
+if ($cliente!=NULL){
 
 $cita= new CitaData();
 
@@ -30,12 +29,12 @@ if($aux[0]==1){
 print "<script>window.location='index.php?view=Cita/UserCita';</script>";
 }
 
+
 }else {
 
    core::alert("Esta siendo redireccionado al registo para poder solicitar Lavado");
 
-   print "<script>window.location='index.php?view=User/UserAddCliente';</script>";
+ print "<script>window.location='index.php?view=User/UserAddCliente';</script>";
 
 }
-
 ?>

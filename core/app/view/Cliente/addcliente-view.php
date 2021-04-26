@@ -33,7 +33,7 @@
             </div>
          </div>
          <div class="col-md-4 mb-3">
-               <label for="validationCustom01">Numero de Celular</label>
+               <label for="validationCustom01">Estado</label>
                   <select type="text" class="form-control" name="activo" id="activo" required>
                     <option value="1">activo</option>
                     <option value="0" selected>inctivo</option>
