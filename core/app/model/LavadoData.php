@@ -13,7 +13,7 @@ class LavadoData
 		$this->idcliente = "";
         $this->idvehiculo = "";
 		$this->estado = "";
-      
+
 	} 
 
 	public function update1(){
@@ -25,6 +25,7 @@ class LavadoData
 		$sql = "update lavado set idvehiculo='".$this->idvehiculo."',idcliente='".$this->idcliente."',estado='".$this->estado."' where id='".$this->id."'";
 		return Executor::doit($sql);
 	}
+
 
 	public function update(){
 		$sql = "update lavado set estado='".$this->estado."',fechadesalida='".$this->fechadesalida."' where id='".$this->id."'";
@@ -51,6 +52,12 @@ class LavadoData
 
 // partiendo de que ya tenemos creado un objecto ClienteData previamente utilizamos el contexto
 	
+	public static function getByIdCliente($id){
+		$sql = "select * from lavado where idcliente='".$id."'";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new LavadoData());
+
+	}
 
 	public static function getById($id){
 		$sql = "select * from lavado where id='".$id."'";
@@ -80,6 +87,19 @@ class LavadoData
 		return Model::many($query[0],new LavadoData());
 
 	}
+
+	public static function getValidationId($id){
+		$sql = "SELECT CASE
+		WHEN EXISTS (SELECT @Result = 1
+					 FROM   lavado
+					 WHERE  id = '".$id."') THEN 1
+		ELSE @Result = 0
+	    END ";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new LavadoData());
+
+	}
+
 
 }
 

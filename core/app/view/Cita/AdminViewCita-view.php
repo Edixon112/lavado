@@ -36,10 +36,11 @@
                   <td><?php echo $cita->id;  ?></td>
                   <td><?php echo $cliente->nombre; ?></td>
                   <td><?php echo $cita->fechapedida; ?></td>
-                  <td><?php echo $cita->estado; ?></td>
+                  <td><?php if($cita->estado==0){ echo "No confirmado";}else{echo "Confirmado";}; ?></td>
                   <td class="text-right table-actions">
                      <a class="table-action  mg-r-10" href="index.php?view=Cita/EditCita&id=<?php echo $cita->id?>"><i class="fa fa-pencil"></i></a>
                      <a class="table-action  mg-r-10" href="index.php?action=Cita/EliminarCita&id=<?php echo $cita->id?>"><i class="fa fa-trash"></i></a>
+                     <a class="table-action  mg-r-10" href="index.php?action=Cita/AddConfirmarCita&id=<?php echo $cita->id?>"><i class="fa fa-paper-plane-o"></i></a>
                      <!--span class="dropdown-toggle " data-toggle="dropdown"></span>
                      <div class="dropdown-menu dropdown-menu-right">
                         <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id="><i class="fa fa-book"></i> Salida</a>

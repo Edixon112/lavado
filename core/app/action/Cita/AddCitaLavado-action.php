@@ -21,7 +21,7 @@ $aux=$cita->add();
 
 
 if($aux[0]==1){
-   core::alert("Sucita ha ingresado con exito al sistema");
+   core::alert("Su cita ha ingresado con exito al sistema");
    print "<script>window.location='index.php?view=Cita/UserCita';</script>";
    
 }else{
@@ -34,7 +34,7 @@ print "<script>window.location='index.php?view=Cita/UserCita';</script>";
 
    core::alert("Esta siendo redireccionado al registo para poder solicitar Lavado");
 
- print "<script>window.location='index.php?view=User/UserAddCliente';</script>";
+   print "<script>window.location='index.php?view=User/UserAddCliente&cedula=".$cedula."';</script>";
 
 }
 ?>

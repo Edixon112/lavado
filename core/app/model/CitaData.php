@@ -66,6 +66,26 @@ class CitaData
 
 	}
 
+
+	public static function contadorFecha($init,$tope){
+		$sql = "select count(fechadeentrada) as catidad_de_fechas_en_rango from lavado
+		where fechadeentrada
+		BETWEEN '".$init."' AND '".$tope."'AND estado NOT IN (0)";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new CitaData());
+
+	}
+
+	public static function contadorFechacita($init,$tope){
+		$sql = "select count(fechapedida) as catidad_de_fechas_en_rango from cita
+		where fechapedida
+		BETWEEN '".$init."' AND '".$tope."'AND estado NOT IN (0)";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new CitaData());
+
+	}
+	
+
 }
 
 ?>

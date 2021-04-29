@@ -12,7 +12,7 @@ class ClienteData
         $this->apellido = "";
         $this->cc = "";
 		$this->celular = "";
-		$this->activo = ""; 
+		$this->activo = 0; 
 	} 
 
    

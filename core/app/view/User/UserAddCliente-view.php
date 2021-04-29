@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="card-body collapse show" id="collapse7">
-                <form class="needs-validation" action="index.php?action=Cliente/AddCliente" method="post" novalidate>
+                <form class="needs-validation" action="index.php?action=Cita/AddClienteCita" method="post" novalidate>
                     <div class="form-row"> 
 
                         <!--info oculta-->
@@ -45,7 +45,7 @@
 
                         <div class="col-md-6 mb-3">
                            <label for="apellido">Numero de Cedula</label>
-                           <input type="text" class="form-control" id="cc" name="cc"placeholder="ingrese su cc" value="" required>
+                           <input type="text" class="form-control" id="cc" name="cc"placeholder="ingrese su cc" value="<?php echo $_GET["cedula"]; ?>" required>
                            <div class="valid-feedback">
                               Numero de cedula valido
                            </div>
@@ -56,7 +56,7 @@
 
                         <div class="col-md-6 mb-3">
                            <label for="apellido">Numero de Celular</label>
-                           <input type="text" class="form-control" id="celular" name="celular"placeholder="ingrese su celular" value="" required>
+                           <input  type="text" class="form-control" id="celular" name="celular"placeholder="ingrese su celular" value="" required>
                            <div class="valid-feedback">
                               Numero valido 
                            </div>

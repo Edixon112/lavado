@@ -31,12 +31,12 @@
                      <td><?php echo $tipo->nombre; ?></td>
                      <td class="text-right table-actions">
                         <a class="table-action  mg-r-10" href="index.php?view=Tipo/EditTipo&id=<?php echo $tipo->id?>"><i class="fa fa-pencil"></i></a>
-                        <a class="table-action  mg-r-10" href="index.php?action=EliminarTipo&id=<?php echo $tipo->id?>"><i class="fa fa-trash"></i></a>
-                        <span class="dropdown-toggle " data-toggle="dropdown"></span>
+                        <a class="table-action  mg-r-10" href="index.php?action=Tipo/EliminarTipo&id=<?php echo $tipo->id?>"><i class="fa fa-trash"></i></a>
+                        <!--span class="dropdown-toggle " data-toggle="dropdown"></span>
                         <div class="dropdown-menu dropdown-menu-right">
                            <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
                            <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
-                           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
+                           <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a-->
                         </div>
                      </td>
                   </tr> 

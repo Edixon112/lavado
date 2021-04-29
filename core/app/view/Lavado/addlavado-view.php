@@ -5,6 +5,8 @@
 
          <?php $vehiculos=VehiculoData::getAll(); ?>
 
+         
+
          <div class="col-md-6 mb-3">
             <p>vehiculo</p>
             <select class="selectpicker form-control" data-hide-disabled="true" data-live-search="true" name="idvehiculo" id="idvehiculo" id="inputGroupSelect01" required>
@@ -25,7 +27,6 @@
              ?>
             </select>
          </div>
-
 
          <div class="col-md-6 mb-3">
 		   	<p>Cliente</p>

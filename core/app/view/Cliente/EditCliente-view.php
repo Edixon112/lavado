@@ -24,7 +24,7 @@
 						<input type="text" style="display: none" name="id" id="id" value="<?php echo $clientes->id;?>" readonly="true"  required />
 
 							<div class="col-md-6 mb-3">
-								<p>Nombre</p>
+							    <label for="validationCustom01">Nombre</label>
 								<div class="input-group mb-6">
 										<!-- <div class="input-group-prepend">
 										<span class="input-group-text" id="basic-addon3"><i class="fa fa-user"></i></span>
@@ -33,7 +33,7 @@
 		             			</div>	
 							</div>
 							<div class="col-md-6 mb-3">
-								<p>apellido</p>
+							    <label for="validationCustom01">apellido</label>
 								<div class="input-group mb-6">
 										<!-- <div class="input-group-prepend">
 										<span class="input-group-text" id="basic-addon3"><i class="fa fa-user"></i></span>
@@ -42,7 +42,7 @@
 		             			</div>	
 							</div>
 	 						<div class="col-md-5 mb-3">
-								<p>Numero de Cedula</p>
+							    <label for="validationCustom01">Numero de Cedula</label>
 								<div class="input-group mb-6">
 									<input type="text" class="form-control" name="cc"value="<?php echo $clientes->cc; ?>" id="cc" aria-label="Amount (to the nearest dollar)">
 										 <!-- <div class="input-group-append">
@@ -51,7 +51,7 @@
 								</div>
 							</div>
 							<div class="col-md-5 mb-3">
-								<p>Numero de Celular</p>
+							    <label for="validationCustom01">Numero de Celular</label>
 								<div class="input-group mb-6">
 									<input type="text" class="form-control" name="celular" value="<?php echo $clientes->celular; ?>"id="celular" aria-label="Amount (to the nearest dollar)">
 										<!-- <div class="input-group-append">
@@ -60,7 +60,8 @@
 								</div>
 							</div>
 							<div class="col-md-2 mb-3">
-                                <label for="validationCustom01">Estado</label>
+							    <label for="validationCustom01">Estado</label>
+								<div class="input-group mb-6">
                                    <select type="text" class="form-control" name="activo" id="activo" required>
                                      <option value="1">activo</option>
                                      <option value="0" selected>inctivo</option>

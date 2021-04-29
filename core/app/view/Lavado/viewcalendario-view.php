@@ -7,11 +7,19 @@
 <?php
  $thejson = null;
  $lavados = LavadoData::getAll();
+ $citas = CitaData::getAll();
 
   foreach($lavados as $lavado){
     $vehiculo=VehiculoData::getById($lavado->idvehiculo);
     $cliente=ClienteData::getById($lavado->idcliente);
-    $thejson[] = array("id"=>$lavado->id,"title"=>$vehiculo->placa."T".$cliente->nombre,"url"=>"#","start"=>$lavado->fechadeentrada,"end"=>$lavado->fechadesalida,"className"=>"bg-teal");
+    $thejson[] = array("id_lavado"=>$lavado->id,"title"=>$vehiculo->placa.">".$cliente->nombre,"url"=>"#","start"=>$lavado->fechadeentrada,
+    "end"=>$lavado->fechadesalida,"className"=>"bg-teal");
+  }
+
+  foreach($citas as $cita){
+    $cliente=ClienteData::getById($cita->idcliente);
+    $thejson[] = array("id_cita"=>$cita->id,"title"=>$cliente->nombre,"url"=>"#","start"=>$cita->fechapedida,
+    "end"=>$lavado->fechadesalida,"className"=>"bg-warning");
   }
 ?>
 <script>
@@ -35,12 +43,31 @@
       events:  <?php echo json_encode($thejson); ?>,
 
       eventClick: function(arg) {
-       
-        if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event.id)) {
-          
-          window.location='index.php?view=Lavado/LikeLavado&id='+arg.event.id;
         
+       // console.log(arg.event._def.extendedProps.id_cita);
+
+       if(arg.event._def.extendedProps.id_cita){
+          
+         
+          if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event._def.extendedProps.id_cita)) {
+
+                window.location='index.php?view=Cita/LikeCita&id='+arg.event._def.extendedProps.id_cita
+                
+                } 
         }
+
+        if(arg.event._def.extendedProps.id_lavado){
+          
+         
+          if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event._def.extendedProps.id_lavado)) {
+
+                window.location='index.php?view=Lavado/LikeLavado&id='+arg.event._def.extendedProps.id_lavado;
+                
+                } 
+        }
+
+
+       
       },
     });
 
