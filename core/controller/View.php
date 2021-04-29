@@ -15,8 +15,6 @@ class View {
 		if(!isset($_GET['view'])){
 			if(Core::$root==""){
 				include "core/app/view/".$view."-view.php";
-			}else if(Core::$root=="admin/"){
-				include "core/app/".Core::$theme."/view/".$view."-view.php";				
 			}
 		}else{
 
@@ -25,8 +23,6 @@ class View {
 				$url ="";
 			if(Core::$root==""){
 			$url = "core/app/view/".$_GET['view']."-view.php";
-			}else if(Core::$root=="admin/"){
-			$url = "core/app/".Core::$theme."/view/".$_GET['view']."-view.php";				
 			}
 				include $url;				
 			}else{
@@ -55,8 +51,6 @@ class View {
 			$url ="";
 			if(Core::$root==""){
 			$url = "core/app/view/".$_GET['view']."-view.php";
-			}else if(Core::$root=="admin/"){
-			$url = "core/app/".Core::$theme."/view/".$_GET['view']."-view.php";				
 			}
 			if(file_exists($file = $url)){
 				$valid = true;
