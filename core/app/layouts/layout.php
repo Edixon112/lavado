@@ -97,7 +97,7 @@
                            <ul class="sub-menu">
                             <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
                             <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
-                            <li><a href="index.php?view=Lavado/ViewcaLendario">Ver calendario ADMIN</a></li>
+                            <li><a href="index.php?view=Lavado/ViewCalendario">Ver calendario ADMIN</a></li>
                         </li>
                         </ul>
                        <li>
