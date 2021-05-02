@@ -43,6 +43,20 @@
       <![endif]-->
    </head>
    <body>
+   <?php 
+                    if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])){
+
+                    //SI SE LOGRA EL INICIO DE SESION SE MUESTRA LA PAGINA //  EN SU DEFECTO SE MUESTRA EL INICIO DE SESION 
+
+
+
+                  ?>
+                          <?php
+                          $user = UserData::getById($_SESSION["user_id"]);
+
+                         
+                             
+                           ?>
       <!--================================-->
       <!-- Page Container Start -->
       <!--================================-->
@@ -138,7 +152,7 @@
                <i data-feather="mail" class="ht-15"></i></a>
                <a class="pull-left" href="page-unlock.html" data-toggle="tooltip" data-placement="top" data-original-title="Lockscreen">
                <i data-feather="lock" class="ht-15"></i></a>
-               <a class="pull-left" href="page-singin.html" data-toggle="tooltip" data-placement="top" data-original-title="Sing Out">
+               <a class="pull-left" href="./logout.php" data-toggle="tooltip" data-placement="top" data-original-title="Sing Out">
                <i data-feather="log-out" class="ht-15"></i></a>
             </div>
             <!--/ Sidebar Footer End -->
@@ -441,7 +455,7 @@
                         <!--================================-->
                         <li class="list-inline-item dropdown">
                            <a  href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="select-profile">Hi, John!</span>
+                           <span class="select-profile">Hi, <?php echo $user->nombre;?></span>
                            <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                            </a>
                            <div class="dropdown-menu dropdown-menu-right dropdown-profile shadow-2">
@@ -461,7 +475,7 @@
                                  <a href="#" class="dropdown-item"><i class="icon-share" aria-hidden="true"></i> My Activity <span class="badge badge-warning ft-right mg-t-3">5+</span></a>
                                  <a href="#" class="dropdown-item"><i class="icon-cloud-download" aria-hidden="true"></i> My Download <span class="badge badge-success ft-right mg-t-3">10+</span></a>
                                  <a href="#" class="dropdown-item"><i class="icon-heart" aria-hidden="true"></i> Support</a>
-                                 <a href="page-singin.html" class="dropdown-item"><i class="icon-power" aria-hidden="true"></i> Sign-out</a>
+                                 <a href="./logout.php" class="dropdown-item"><i class="icon-power" aria-hidden="true"></i> Sign-out</a>
                               </div>
                            </div>
                         </li>
@@ -509,317 +523,59 @@
          <!--/ Page Content End  -->
       </div>
       <!--/ Page Container End -->
+               <?php 
+
+                                 }else{
+                                    ?>
+                              <div style="background-image: url('img/categoria/fondo.jpg');">
+                                    <div class="ht-100v d-flex">
+                                       <div class="card shadow-none pd-20 mx-auto wd-300 text-center bd-1 align-self-center">
+                                           <center> <img src="img/categoria/0.jpg" width="40%"></center>
+                                       
+                                           <h4 class="card-title mt-3 text-center">Login</h4>
+                                        
+                                  
+                                      
+                                          <form role="form" action="index.php?action=processlogin" method="post"> 
+                                           
+                                          <input type="hidden" class="form-control"  id="direccion"  value="<?php echo $_SERVER["REQUEST_URI"];?>" name="direccion">
+                                                   <div class="form-group">
+                                                      <label for="exampleInputEmail1">Usuario</label>
+                                                      <input type="text" class="form-control" required="" id="exampleInputEmail1" placeholder="Ingrese su usuario" name="username">
+                                                   </div>
+            
+                                                   <div class="form-group">
+                                                      <label for="exampleInputPassword1">Contraseña</label>
+                                                      <input type="password" name="password" required="" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su Password">
+                                                   </div>
+            
+            
+                                                <!--       <p class="text-center"><a href="">Forget Password?</a></p>-->
+                                             <div class="form-group">
+                                                <button type="submit" class="btn btn-custom-primary btn-block tx-13 hover-white"> Login </button>
+                                             </div>
+                                                 <!--   <p class="text-center">Don't have an account?<br/> <a href="">Create Account</a> </p>-->
+                                          </form>
+                                       </div>
+                                    </div>
+                              </div>
+            
+            
+            
+            
+                           <?php }
+                                    ?>
+               
+
+
+      
       <!--================================-->
       <!-- Scroll To Top Start-->
       <!--================================-->	
       <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
       <!--/ Scroll To Top End -->
       <!--================================-->
-      <!-- Setting Sidebar Start -->
-      <!--================================-->	  
-      <div class="setting-sidebar"  id="settingSidebar">
-         <div class="wrapper"   id="settingSidebarScroll">
-            <ul class="nav nav-tabs nav-pills nav-fill">
-               <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#nav-notifications">Notifications</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link active show" data-toggle="tab" href="#nav-activity">Activity</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#nav-setting">Setting</a>
-               </li>
-            </ul>
-            <!-- Notification -->
-            <div class="tab-content">
-               <div class="tab-pane fade" id="nav-notifications">
-                  <div class="card-activities mg-t-40-force">
-                     <div class="media-list">
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-primary op-6">
-                              <i class="icon ion-stats-bars"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Report has been updated</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-success op-6">
-                              <i class="icon ion-trophy"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Achievement Unlocked</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-purple op-6">
-                              <i class="icon ion-image"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Added new images</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-danger op-6">
-                              <i class="icon ion-stats-bars"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Report has been updated</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-warning op-6">
-                              <i class="icon ion-trophy"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Achievement Unlocked</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-purple op-6">
-                              <i class="icon ion-image"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Added new images</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-danger op-6">
-                              <i class="icon ion-stats-bars"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Report has been updated</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-warning op-6">
-                              <i class="icon ion-trophy"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Achievement Unlocked</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                        <div class="media pd-b-30">
-                           <div class="activity-icon bg-teal op-6">
-                              <i class="icon ion-image"></i>
-                           </div>
-                           <div class="ml-3 align-items-center">
-                              <h6 class="tx-13 tx-dark">Added new images</h6>
-                              <p class="tx-12 mb-0">Aenean vulputate eleifend tellus ligula, porttitor.</p>
-                              <span class="small">05:00 PM Sun, 02 Feb 2019</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- Activity -->
-               <div class="tab-pane fade active show" id="nav-activity">
-                  <div class="activity mg-t-40-force">
-                     <i class="icon-check bg-soft-primary"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Task finished</h6>
-                              <span class="small">02 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-teal"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Video conference</h6>
-                              <span class="small">04 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-warning"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Task Overdue</h6>
-                              <span class="small">06 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-danger"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Added your friend list</h6>
-                              <span class="small">07 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-success"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Task Overdue</h6>
-                              <span class="small">09 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-primary"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Submit a blog</h6>
-                              <span class="small">11 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-teal"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">New Request</h6>
-                              <span class="small">12 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                     <i class="icon-check bg-soft-warning"></i>
-                     <div class="time-item">
-                        <div class="item-info ">
-                           <div class="d-flex justify-content-between align-items-center">
-                              <h6 class="tx-dark tx-13 mb-0">Task Overdue</h6>
-                              <span class="small">19 Feb 2019</span>
-                           </div>
-                           <p class="mt-2 tx-12 mg-b-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                           <div><span class="badge bg-soft-primary tx-uppercase">Design</span> <span class="badge bg-soft-danger  tx-uppercase">HTML</span> <span class="badge bg-soft-success  tx-uppercase">Css</span> <span class="badge bg-soft-teal  tx-uppercase">Dashboard</span></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- Setting -->
-               <div class="tab-pane fade" id="nav-setting">
-                  <h5 class="tx-dark tx-13 tx-semibold mg-t-30">Notification Setting</h5>
-                  <ul class="list-unstyled">
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Notify when receive email</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary">
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Receive calls in meeting</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Update on task completion</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>New user registration</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Files uploaded successfully</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                  </ul>
-                  <h5 class="tx-dark tx-13 tx-semibold mg-t-50">File Sharing Setting</h5>
-                  <ul class="list-unstyled">
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Notify when receive email</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Receive calls in meeting</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Update on task completion</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>New user registration</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Files uploaded successfully</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                  </ul>
-                  <h5 class="tx-dark tx-13 tx-semibold mg-t-50">Reports Setting</h5>
-                  <ul class="list-unstyled">
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Generate Reports</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Receive calls in meeting</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Enable Report Export</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>New user registration</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Allow Data Collection</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                  </ul>
-                  <h5 class="tx-dark tx-13 tx-semibold mg-t-50">System Setting</h5>
-                  <ul class="list-unstyled">
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Automatic updates</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Receive calls in meeting</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>Current statistics</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>New user registration</span>
-                        <input type="checkbox" checked data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                     <li class="d-flex justify-content-between mg-y-20">
-                        <span>User suggestions</span>
-                        <input type="checkbox" data-toggle="toggle" data-size="xs"  data-onstyle="primary" >
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--/ Setting Sidebar End  -->      
+          
       <!--================================-->
       <!-- Demo Sidebar Start -->
       <!--================================-->	  
