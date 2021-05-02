@@ -539,7 +539,7 @@
                               <div style="background-image: url('assets/images/agua2.jpg');">
                                     <div class="ht-100v d-flex">
                                        <div class="card shadow-none pd-20 mx-auto wd-300 text-center bd-1 align-self-center">
-                                           <center> <img src="assets/images/LOGOEB.jpeg" width="40%"></center>
+                                           <center> <img src="assets/images/LOGO.jpeg" width="40%"></center>
                                        
                                            <h4 class="card-title mt-3 text-center">Login</h4>
                                         
