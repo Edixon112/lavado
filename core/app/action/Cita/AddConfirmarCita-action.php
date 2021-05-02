@@ -8,7 +8,7 @@ $fechatope = new DateTime($fechainicio);
 $fechatope->add(new DateInterval('P0Y0M0DT0H30M0S'));
 $fechatope->format('Y-m-d H:i:s');
 
-$contador = CitaData::contadorFecha($fechainicio,$fechatope->format('Y-m-d H:i:s'));
+/*$contador = CitaData::contadorFecha($fechainicio,$fechatope->format('Y-m-d H:i:s'));
 $contador->catidad_de_fechas_en_rango;  
 
 
@@ -36,7 +36,7 @@ $options = stream_context_create(['http' => [
     ]
 ]);
 // Send a request
-$result = file_get_contents($url, false, $options);
+$result = file_get_contents($url, false, $options);*/
 
 
 // antes de confirmar se debe pasar por logica si se confirma o no

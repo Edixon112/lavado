@@ -82,6 +82,15 @@
                          
                         <li> 
                            <a href="#"><i data-feather="user"></i>
+                           <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=User/Mci_View_User">Ver ADMIN</a></li>
+                              <li><a href="index.php?view=User/Mci_Add_User">Ingresar ADMIN</a></li>
+                           </ul>
+                        </li>
+
+                        <li> 
+                           <a href="#"><i data-feather="user"></i>
                            <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Cliente/AddCliente">Añadir cliente ADMIN</a></li>
@@ -527,10 +536,10 @@
 
                                  }else{
                                     ?>
-                              <div style="background-image: url('img/categoria/fondo.jpg');">
+                              <div style="background-image: url('assets/images/agua.jpg');">
                                     <div class="ht-100v d-flex">
                                        <div class="card shadow-none pd-20 mx-auto wd-300 text-center bd-1 align-self-center">
-                                           <center> <img src="img/categoria/0.jpg" width="40%"></center>
+                                           <center> <img src="assets/images/LOGOEB.jpg" width="40%"></center>
                                        
                                            <h4 class="card-title mt-3 text-center">Login</h4>
                                         
