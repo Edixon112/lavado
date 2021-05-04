@@ -16,7 +16,7 @@
 	 			</div>
 				<div class="card-body collapse show" id="collapse4">
 				<?php 
-				$Vehiculos = VehiculoData::getById($_GET["id"]); 
+				$Vehiculos = VehiculoData::getById($_POST["id"]); 
 				?>
 					<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Vehiculo/EditVehiculo" role="form">
 						<div class="row">

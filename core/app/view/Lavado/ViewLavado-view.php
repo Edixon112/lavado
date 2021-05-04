@@ -47,16 +47,29 @@
                   <td><?php echo $cliente->nombre; ?></td>
                   <td><?php echo $vehiculo->placa; ?></td>
                   <td><?php if($lavado->estado==0){ echo "en proceso de lavado";}else{echo "Vehiculo lavado";} ?> </td>
-                  <td class="text-right table-actions">
-                     <a class="table-action  mg-r-10" href="index.php?view=Lavado/EditLavado&id=<?php echo $lavado->id?>" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a>
-                     <a class="table-action  mg-r-10" href="index.php?action=Lavado/EliminarLavado&id=<?php echo $lavado->id?>" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a>
-                     <span class="dropdown-toggle " data-toggle="dropdown"></span>
-                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="index.php?action=Lavado/SalidaVehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida de Lavado</a>
-                        <!--a class="dropdown-item" href="index.php?action=ApiMensaje&id=<?php echo $lavado->id?>"><i class="fa fa-link"></i> Mensaje</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a-->
-                     </div>
-                  </td>
+                  <td class="text-Center table-actions">
+                        <div class="btn-group mg-t-5">  
+
+                           <form action="index.php?view=Lavado/EditLavado" method="post">   
+                              <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                              <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                              <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
+                           </form>
+
+                           <form action="index.php?action=Lavado/EliminarLavado" method="post">   
+                              <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                              <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                              <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
+                           </form>
+
+                           <form action="index.php?action=Lavado/SalidaVehiculo" method="post">   
+                              <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                              <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                              <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Añadir lavado"><i class="fa fa-automobile"></i></a></button>
+                           </form>
+
+                        </div>
+                     </td>
                </tr>
                <?php endforeach?>
             </tbody>

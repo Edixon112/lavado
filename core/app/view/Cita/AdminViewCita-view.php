@@ -101,12 +101,6 @@
                               <!--   ---------------------------          MODAL               ----------------------     -->
                         </form>  
 
-                           <!--span class="dropdown-toggle " data-toggle="dropdown"></span>
-                           <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id="><i class="fa fa-book"></i> Salida</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
-                              <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
-                           </div-->
                      </div>      
                   </td>
                </tr> 
