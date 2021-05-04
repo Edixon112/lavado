@@ -51,9 +51,8 @@
          
           if (confirm('¿ informacion detallada?\n'+arg.event.title+"\nID: "+arg.event._def.extendedProps.id_cita)) {
 
-                window.location='index.php?view=Cita/LikeCita&id='+arg.event._def.extendedProps.id_cita
+                window.location='index.php?view=Cita/LikeCita&id='+arg.event._def.extendedProps.id_cita;
 
-                <!DOCTYPE html>  </html>
                 
                 } 
         }
