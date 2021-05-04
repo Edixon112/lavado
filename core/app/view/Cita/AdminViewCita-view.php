@@ -43,19 +43,19 @@
                      <div class="btn-group mg-t-5">  
 
                         <form action="index.php?view=Cita/EditCita" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                           <input type="hidden" name="id" value=<?php echo $cita->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
                         </form>
 
                         <form action="index.php?action=Cita/EliminarCita" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                           <input type="hidden" name="id" value=<?php echo $cita->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
                         </form>
 
                         <form action="index.php?action=Cita/AddConfirmarCita" method="post">   
-                           <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                           <input type="hidden" name="id" value=<?php echo $cita->id;?>>
                            <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
                            <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Confirmar Lavado"><i class="fa fa-check"></i></a></button>
                         </form>
