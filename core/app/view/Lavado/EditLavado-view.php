@@ -13,7 +13,7 @@
  			</div>
 			<div class="card-body collapse show" id="collapse4">
 			<?php 
-			$clientes = LavadoData::getById($_GET["id"]); 
+			$clientes = LavadoData::getById($_POST["id"]); 
 			?>
 				<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Lavado/EditLavado" role="form">
 					<div class="row">

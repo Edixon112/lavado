@@ -1,6 +1,6 @@
 <?php 
 
-$precio= PrecioData::delById($_GET["id"]);
+$precio= PrecioData::delById($_POST["id"]);
 
 
 

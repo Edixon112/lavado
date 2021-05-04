@@ -14,7 +14,7 @@
  			</div>
 			<div class="card-body collapse show" id="collapse4">
 			<?php 
-			$precios = PrecioData::getById($_GET["id"]); 
+			$precios = PrecioData::getById($_POST["id"]); 
 			?>
 				<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Precio/EditPrecio" role="form">
 					<div class="row">

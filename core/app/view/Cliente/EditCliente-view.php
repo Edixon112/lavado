@@ -14,7 +14,7 @@
  			</div>
 			<div class="card-body collapse show" id="collapse4">
 			<?php 
-			$clientes = ClienteData::getById($_GET["id"]); 
+			$clientes = ClienteData::getById($_POST["id"]); 
 			?>
 				<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Cliente/EditCliente" role="form">
 					<div class="row">

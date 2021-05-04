@@ -81,7 +81,7 @@
                      <li>
                          
                         <li> 
-                           <a href="#"><i data-feather="user"></i>
+                           <a href="#"><i data-feather="user-check"></i>
                            <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=User/Mci_View_User">Ver ADMIN</a></li>
@@ -99,7 +99,7 @@
                            </ul>
                         </li>
                         <li> 
-                           <a href="#"><i data-feather="user"></i>
+                           <a href="#"><i data-feather="calendar"></i>
                            <span>Cita</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
                               <li><a href="index.php?view=Cita/AdminViewCita">Ver Pedido Cliente ADMIN</a></li>
@@ -140,7 +140,7 @@
                          </ul>
                       </li>
                       <li>
-                         <a href="#"><i data-feather="list"></i>
+                         <a href="#"><i data-feather="file"></i>
                          <span>Factura</span><i class="accordion-icon fa fa-angle-left"></i></a>
                          <ul class="sub-menu">
                             <li><a href="index.php?view=ViewFactura">Ver Factura ADMIN</a></li>

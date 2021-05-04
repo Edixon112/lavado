@@ -1,6 +1,6 @@
 <?php 
 
-$lavado=LavadoData::delById($_GET["id"]);
+$lavado=LavadoData::delById($_POST["id"]);
 
 
 print "<script>window.location='index.php?view=Lavado/ViewLavado';</script>";

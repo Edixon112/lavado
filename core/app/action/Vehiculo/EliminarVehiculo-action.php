@@ -1,7 +1,7 @@
 <?php 
 date_default_timezone_set("America/Bogota");
 
-$vehiculo= VehiculoData::delById($_GET["id"]);
+$vehiculo= VehiculoData::delById($_POST["id"]);
 
 
 

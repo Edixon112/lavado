@@ -16,7 +16,7 @@
 	 			</div>
 				<div class="card-body collapse show" id="collapse4">
 				<?php 
-				$tipos = TipoData::getById($_GET["id"]); 
+				$tipos = TipoData::getById($_POST["id"]); 
 				?>
 					<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Tipo/EditTipo" role="form">
 						<div class="row">

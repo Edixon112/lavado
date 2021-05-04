@@ -1,14 +1,14 @@
 <?php
 
-$cita = CitaData::getById($_GET["id"]);
+$cita = CitaData::getById($_POST["id"]);
 
-$fechainicio = $cita->fechapedida;
+/*$fechainicio = $cita->fechapedida;
 
 $fechatope = new DateTime($fechainicio);
 $fechatope->add(new DateInterval('P0Y0M0DT0H30M0S'));
 $fechatope->format('Y-m-d H:i:s');
 
-/*$contador = CitaData::contadorFecha($fechainicio,$fechatope->format('Y-m-d H:i:s'));
+$contador = CitaData::contadorFecha($fechainicio,$fechatope->format('Y-m-d H:i:s'));
 $contador->catidad_de_fechas_en_rango;  
 
 
@@ -48,6 +48,9 @@ $cita->idcliente;
 
 $aux=$cita->update();
 
+if ($aux[0]==1){
+
+    core::alert("CONFIRMADO / Mensaje de confirmacion enviado al cliente");
 
 $cliente=ClienteData::getById($cita->idcliente);
 $nombre=$cliente->nombre;
@@ -56,7 +59,7 @@ $celular=$cliente->celular;
 $data = [
     'phone' => "57".$celular, // Receivers phone
 
-    'body' => "BIENVENIDO AL SERVICIO DE LAVADO SR(A). ".$nombre." SU SOLICITUD ESTA APROBADA \n\n ESPERAMOS SU VEHICULO EL DIA: fecha de cita", // Message
+    'body' => "BIENVENIDO AL SERVICIO DE LAVADO SR(A). *".$nombre."* SU SOLICITUD ESTA APROBADA \n\n ESPERAMOS SU VEHICULO EL DIA: *".$cita->fechapedida."*", // Message
 ];
 $json = json_encode($data); // Encode data to JSON
 // URL for request POST /message
@@ -74,5 +77,13 @@ $options = stream_context_create(['http' => [
 $result = file_get_contents($url, false, $options);
 
 print "<script>window.location='index.php?view=Cita/AdminViewCita';</script>";
+
+}else{
+
+    core::alert("Error al confirmar lavado");
+
+    print "<script>window.location='index.php?view=Cita/AdminViewCita';</script>";
+
+} 
 
 ?>

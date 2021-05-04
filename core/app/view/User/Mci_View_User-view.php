@@ -69,18 +69,18 @@
 
                                                          <form action="index.php?view=User/Mci_Edit_User" method="post">
                                                              <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
-                                                                      <button class="btn btn-secondary" type="submit"><i class="fa fa-pencil" style="color: yellow"></i></button>
+                                                                      <button class="btn btn-secondary" type="submit" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil" style="color: yellow" ></i></button>
                                                                       </form>
                                                       
                                                       
                                                         <form action="index.php?action=User/DelUser" method="post">   
                                                               <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
-                                                                      <button class="btn btn-secondary" onclick="return pregunta()"  style="color: red"><i class="fa fa-trash"></i></button>
+                                                                      <button class="btn btn-secondary" onclick="return pregunta()"  style="color: red" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></button>
                                                          </form>
 
                                                          <form action="index.php?view=User/View_Profile" method="post">   
                                                               <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
-                                                                      <button class="btn btn-secondary"  style="color: white"><i class="fa fa-eye"></i></button>
+                                                                      <button class="btn btn-secondary"  style="color: white" data-toggle="tooltip" data-placement="top" title="Ver perfil"><i class="fa fa-eye"></i></button>
                                                          </form>
                                                          
                                                       </div>

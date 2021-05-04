@@ -35,15 +35,21 @@
                   <td><?php echo $cliente->apellido; ?></td>
                   <td><?php echo $cliente->cc; ?></td>
                   <td><?php echo $cliente->celular; ?></td>
-                  <td class="text-right table-actions">
-                     <a class="table-action  mg-r-10" href="index.php?view=Cliente/EditCliente&id=<?php echo $cliente->id?>"><i class="fa fa-pencil"></i></a>
-                     <a class="table-action  mg-r-10" href="index.php?action=Cliente/EliminarCliente&id=<?php echo $cliente->id?>"><i class="fa fa-trash"></i></a>
-                     <!--span class="dropdown-toggle " data-toggle="dropdown"></span>
-                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="index.php?action=Salida_Vehiculo&id=<?php echo $lavado->id?>"><i class="fa fa-book"></i> Salida</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
-                     </div-->
+                  <td class="text-Center table-actions">
+                     <div class="btn-group mg-t-5">  
+
+                        <form action="index.php?view=Cliente/EditCliente" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                           <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                           <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-pencil"></i></a></button>
+                        </form>
+
+                        <form action="index.php?action=Cliente/EliminarCliente" method="post">   
+                           <input type="hidden" name="id" value=<?php echo $cliente->id;?>>
+                           <input type="hidden" name="view" value=<?php echo $_GET["view"];?>>
+                           <button class="btn btn-secondary" onclick="return pregunta()" ><a data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fa fa-trash"></i></a></button>
+                        </form>
+                     </div>
                   </td>
                </tr> 
                <?php 

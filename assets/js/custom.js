@@ -304,7 +304,7 @@ var handleCardAction = function() {
 		e.preventDefault();
 		$(this).closest('.card').find('.card-body').slideToggle();
 	});*/
-
+	
 	// reload
 	$(document).on('mouseover', '[data-toggle=refresh]', function(e) {
 		if (!$(this).attr('data-init')) {
