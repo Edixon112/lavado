@@ -14,7 +14,7 @@
  			</div>
 			<div class="card-body collapse show" id="collapse4">
 			<?php 
-			$Lavado=LavadoData::getById($_POST["id"]); 
+			$Lavado=LavadoData::getById($_GET["id"]); 
 			?>
 				<form class="form-horizontal" method="post" id="addproduct" action="index.php?action=Lavado/EditLavado" role="form">
 					<div class="row">
