@@ -5,19 +5,18 @@ date_default_timezone_set("America/Bogota");
 
 $cita=CitaData::getById($_POST["id"]);
 
-"cita ".$cita->id;
-"<br>";
+$cita->id;
+
 $lavado=new LavadoData();
 
 $lavado->id_cita=$cita->id;
-"<br>";
 
 
 $lavado->idcliente=$cita->idcliente;
-"<br>";
+
 
 $lavado->idvehiculo=$_POST["idvehiculo"];
-"<br>";
+
 
 $lavado->fechadeentrada=date("Y-m-d H:i:s");
 $var=$lavado->add();
