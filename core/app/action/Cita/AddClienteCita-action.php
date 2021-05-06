@@ -29,7 +29,7 @@ if($aux[0]==1){
  ];
  $json = json_encode($data); // Encode data to JSON
  // URL for request POST /message
- $token = ' ihdrcqqh6f0routa';
+ $token = 'ihdrcqqh6f0routa';
  $instanceId = '265655';
 $url = 'https://api.chat-api.com/instance'.$instanceId.'/message?token='.$token;
  // Make a POST request

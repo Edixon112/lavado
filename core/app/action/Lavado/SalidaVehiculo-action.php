@@ -18,11 +18,11 @@ $placa=$vehiculo->placa;
 $data = [
     'phone' => "57".$celular, // Receivers phone benji 573015256417 
 
-    'body' => "ESTIMADO/A SR(A). ".$nombre."\n\nSU VEHICULO PLACA ".$placa." ESTA LAVADO PUEDE RETIRAR SU VEHICULO.", // Message
+    'body' => "ESTIMADO/A SR(A). *".$nombre."*\n\nSU VEHICULO PLACA *".$placa."* ESTA LAVADO PUEDE RETIRAR SU VEHICULO.", // Message
 ];
 $json = json_encode($data); // Encode data to JSON
 // URL for request POST /message
-$token = ' ihdrcqqh6f0routa';
+$token = 'ihdrcqqh6f0routa';
 $instanceId = '265655';
 $url = 'https://api.chat-api.com/instance'.$instanceId.'/message?token='.$token;
 // Make a POST request

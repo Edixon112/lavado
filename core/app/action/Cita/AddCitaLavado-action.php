@@ -29,11 +29,11 @@ if($aux[0]==1){
    $data = [
       'phone' => '573015256417', // Receivers phone
   
-      'body' => "EL CLIENTE *".$cliente->nombre."* SOLICITA UN LAVADO PARA LAS *".$cita->fechapedida."*", // Message
+      'body' => "EL CLIENTE *".$cliente->nombre."* *".$cliente->apellido."* SOLICITA UN LAVADO PARA LAS *".$cita->fechapedida."*", // Message
   ];
   $json = json_encode($data); // Encode data to JSON
   // URL for request POST /message
-  $token = ' ihdrcqqh6f0routa';
+  $token = 'ihdrcqqh6f0routa';
   $instanceId = '265655';
   $url = 'https://api.chat-api.com/instance'.$instanceId.'/message?token='.$token;
   // Make a POST request
