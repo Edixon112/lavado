@@ -34,7 +34,7 @@
       <link type="text/css" rel="stylesheet" href="assets/plugins/datepicker/css/datepicker.min.css"><!-- este tiempo-->
       
       <!-- Favicon -->	
-      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="assets/images/EB.jpeg" type="image/x-icon">
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -79,7 +79,6 @@
                <div class="page-sidebar-menu">
                   <ul class="accordion-menu">
                      <li>
-                         
                         <li> 
                            <a href="#"><i data-feather="user-check"></i>
                            <span>Admin</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -88,7 +87,6 @@
                               <li><a href="index.php?view=User/Mci_Add_User">Ingresar ADMIN</a></li>
                            </ul>
                         </li>
-
                         <li> 
                            <a href="#"><i data-feather="user"></i>
                            <span>Cliente</span><i class="accordion-icon fa fa-angle-left"></i></a>
@@ -107,6 +105,15 @@
                            </ul>
                         </li>
                         <li>
+                           <a href="#"><i data-feather="cloud-drizzle"></i>
+                           <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
+                              <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
+                              <li><a href="index.php?view=Lavado/ViewCalendario">Ver calendario ADMIN</a></li>
+                           </ul>
+                        </li>
+                        <li>
                            <a href="#"><i data-feather="truck"></i>
                            <span>Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
@@ -115,37 +122,28 @@
                            </ul>
                         </li>
                         <li>
-                           <a href="#"><i data-feather="cloud-drizzle"></i>
-                           <span>Lavado</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <a href="#"><i data-feather="list"></i>
+                           <span>Tipo De Vehiculo</span><i class="accordion-icon fa fa-angle-left"></i></a>
                            <ul class="sub-menu">
-                            <li><a href="index.php?view=Lavado/AddLavado">Añadir lavado ADMIN</a></li>
-                            <li><a href="index.php?view=Lavado/ViewLavado">Ver lavado ADMIN</a></li>
-                            <li><a href="index.php?view=Lavado/ViewCalendario">Ver calendario ADMIN</a></li>
+                                <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo ADMIN</a></li>
+                                <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo ADMIN</a></li>
+                           </ul>
                         </li>
-                        </ul>
-                       <li>
-                         <a href="#"><i data-feather="tag"></i>
-                         <span>Precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                         <ul class="sub-menu">
-                            <li><a href="index.php?view=Precio/AddPrecio">Añadir precio ADMIN</a></li>
-                            <li><a href="index.php?view=Precio/ViewPrecio">Ver precio ADMIN</a></li>
-                         </ul>
-                      </li>
-                      <li>
-                         <a href="#"><i data-feather="list"></i>
-                         <span>Tipo</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                         <ul class="sub-menu">
-                            <li><a href="index.php?view=Tipo/AddTipo">Añadir tipo ADMIN</a></li>
-                            <li><a href="index.php?view=Tipo/ViewTipo">Ver tipo ADMIN</a></li>
-                         </ul>
-                      </li>
-                      <li>
-                         <a href="#"><i data-feather="file"></i>
-                         <span>Factura</span><i class="accordion-icon fa fa-angle-left"></i></a>
-                         <ul class="sub-menu">
-                            <li><a href="index.php?view=ViewFactura">Ver Factura ADMIN</a></li>
-                         </ul>
-                      </li>
+                        <li>
+                           <a href="#"><i data-feather="tag"></i>
+                           <span>Precio</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                                <li><a href="index.php?view=Precio/AddPrecio">Añadir precio ADMIN</a></li>
+                                <li><a href="index.php?view=Precio/ViewPrecio">Ver precio ADMIN</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#"><i data-feather="file"></i>
+                           <span>Factura</span><i class="accordion-icon fa fa-angle-left"></i></a>
+                           <ul class="sub-menu">
+                              <li><a href="index.php?view=ViewFactura">Ver Factura ADMIN</a></li>
+                           </ul>
+                        </li>
                      </li>
                   </ul>
                </div>
@@ -155,12 +153,8 @@
             <!-- Sidebar Footer Start -->
             <!--================================-->
             <div class="sidebar-footer">									
-               <a class="pull-left" href="page-profile.html" data-toggle="tooltip" data-placement="top" data-original-title="Profile">
+               <a class="pull-left offset-md-6" href="index.php?view=User/Mci_View_User-view" data-toggle="tooltip" data-placement="top" data-original-title="Profile">
                <i data-feather="user" class="ht-15"></i></a>									
-               <a class="pull-left " href="mailbox.html" data-toggle="tooltip" data-placement="top" data-original-title="Mailbox">
-               <i data-feather="mail" class="ht-15"></i></a>
-               <a class="pull-left" href="page-unlock.html" data-toggle="tooltip" data-placement="top" data-original-title="Lockscreen">
-               <i data-feather="lock" class="ht-15"></i></a>
                <a class="pull-left" href="./logout.php" data-toggle="tooltip" data-placement="top" data-original-title="Sing Out">
                <i data-feather="log-out" class="ht-15"></i></a>
             </div>
@@ -217,249 +211,6 @@
                      <ul class="list-inline justify-content-end">
                         <li class="list-inline-item align-middle"><a  href="#" id="search-button"><i class="ion-ios-search-strong tx-20"></i></a></li>
                         <!--================================-->
-                        <!-- Languages Dropdown Start -->
-                        <!--================================-->
-                        <li class="list-inline-item align-middle dropdown hidden-xs">
-                           <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i class="flag-icon flag-icon-us"></i>
-                           </a>
-                           <ul class="dropdown-menu languages-dropdown shadow-2">
-                              <li>
-                                 <a href="#" data-lang="en"><i class="flag-icon flag-icon-us mr-2"></i><span>English-US</span></a>
-                              </li>
-                              <li>
-                                 <a href="#" data-lang="es"><i class="flag-icon flag-icon-es mr-2"></i><span>Spanish</span></a>
-                              </li>
-                              <li>
-                                 <a href="#" data-lang="fr"><i class="flag-icon flag-icon-fr mr-2"></i><span>French</span></a>
-                              </li>
-                              <li>
-                                 <a href="#" data-lang="gr"><i class="flag-icon flag-icon-de mr-2"></i><span>German</span></a>
-                              </li>
-                              <li>
-                                 <a href="#" data-lang="ru"><i class="flag-icon flag-icon-ru mr-2"></i><span>Russian</span></a>
-                              </li>
-                              <li>
-                                 <a href="#" data-lang="ru"><i class="flag-icon flag-icon-gb mr-2"></i><span>English-UK</span></a>
-                              </li>
-                           </ul>
-                        </li>
-                        <!--/ Languages Dropdown End -->
-                        <!--================================-->
-                        <!-- Notifications Dropdown Start -->
-                        <!--================================-->
-                        <li class="list-inline-item dropdown hidden-xs">
-                           <a class="notification-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i class="icon-bell tx-16"></i>
-                           <span class="notification-count wave in"></span>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-right shadow-2">
-                              <!-- Top Notifications Area -->
-                              <div class="top-notifications-area">
-                                 <!-- Heading -->
-                                 <div class="notifications-heading">
-                                    <div class="heading-title">
-                                       <h6>Notifications</h6>
-                                    </div>
-                                    <span>5+ New Notifications</span>
-                                 </div>
-                                 <div class="notifications-box" id="notificationsBox">
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
-                                             <i class="fa fa-smile-o tx-success tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>Your order is placed</span>
-                                             <span class="small tx-gray-600 ft-right">Jun 10</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-warning">
-                                             <i class="fa fa-bell tx-warning tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>Your item is shipped</span>
-                                             <span class="small tx-gray-600 ft-right">Jun 05</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
-                                             <i class="fa fa-check tx-success tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>New Message received</span>
-                                             <span class="small tx-gray-600 ft-right">Jun 02</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-danger">
-                                             <i class="fa fa-heartbeat tx-danger tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>Payment failed!</span>
-                                             <span class="small tx-gray-600 ft-right">May 29</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
-                                             <i class="fa fa-info tx-info tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>New document available</span>
-                                             <span class="small tx-gray-600 ft-right">May 25</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="wd-45 ht-38 mg-r-15 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
-                                             <i class="fa fa-info tx-info tx-16"></i>
-                                          </div>
-                                          <div>
-                                             <span>New document available</span>
-                                             <span class="small tx-gray-600 ft-right">May 08</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry.</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="notifications-footer">
-                                    <a href="#">View all Notifications</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <!--/ Notifications Dropdown End -->
-                        <!--================================-->
-                        <!-- Messages Dropdown Start -->
-                        <!--================================-->
-                        <li class="list-inline-item dropdown hidden-xs">
-                           <a class="message-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i class="icon-envelope tx-16"></i>
-                           <span class="messages-count wave in"></span>
-                           </a>
-                           <div class="dropdown-menu dropdown-menu-right shadow-2">
-                              <div class="top-message-area">
-                                 <div class="top-message-heading">
-                                    <div class="heading-title">
-                                       <h6>Messages</h6>
-                                    </div>
-                                    <span>5+ New Messages</span>
-                                 </div>
-                                 <div class="message-box" id="messageBox">
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-online">
-                                             <img src="assets/images/avatar/avatar1.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Mary Adams</span>
-                                             <span class="small tx-gray-600 ft-right">30 minutes ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-online">
-                                             <img src="assets/images/avatar/avatar2.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Richards Caleb</span>
-                                             <span class="small tx-gray-600 ft-right">12 hours ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-busy">
-                                             <img src="assets/images/avatar/avatar3.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Lane Richards</span>
-                                             <span class="small tx-gray-600 ft-right">2 days ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-busy">
-                                             <img src="assets/images/avatar/avatar4.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Edward Lane</span>
-                                             <span class="small tx-gray-600 ft-right">3 days ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-offline">
-                                             <img src="assets/images/avatar/avatar5.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Lane Richards</span>
-                                             <span class="small tx-gray-600 ft-right">2 days ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
-                                       <div class="d-flex justify-content-between">
-                                          <div class="pd-r-15">
-                                             <span class="avatar avatar-offline">
-                                             <img src="assets/images/avatar/avatar6.png" class="img-fluid" alt="">
-                                             <i></i>
-                                             </span>
-                                          </div>
-                                          <div>
-                                             <span>Edward Lane</span>
-                                             <span class="small tx-gray-600 ft-right">3 days ago</span>
-                                             <div class="tx-gray-600 tx-11">Dummy text of the printing and type setting industry...</div>
-                                          </div>
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="top-message-footer">
-                                    <a href="#">View all Messages</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </li>
-                        <!--/ Messages Dropdown End -->
-                        <!--================================-->
                         <!-- Profile Dropdown Start -->
                         <!--================================-->
                         <li class="list-inline-item dropdown">
@@ -490,14 +241,7 @@
                         </li>
                         <!-- Profile Dropdown End -->
                         <!--================================-->
-                        <!-- Setting Sidebar Start -->
-                        <!--================================-->
-                        <li class="list-inline-item dropdown hidden-xs">
-                           <a class="settings-icon" id="settingSidebarTrigger" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <i class="icon-settings tx-16"></i>
-                           </a>					   
-                        </li>
-                        <!--/ Setting Sidebar End -->
+
                      </ul>
                   </div>
                   <!--/ Header Right End -->
@@ -512,7 +256,7 @@
                <!-- Main Wrapper Start -->
                <!--==============LAS LLAMADAS A LOS DEMAS==================-->
                		
-                <?php   View::load("Cliente/ViewCliente"); ?>
+                <?php   View::load("ViewPrincipal"); ?>
 
                <!--/ Main Wrapper End -->
                </div>
@@ -585,123 +329,6 @@
       <!--/ Scroll To Top End -->
       <!--================================-->
           
-      <!--================================-->
-      <!-- Demo Sidebar Start -->
-      <!--================================-->	  
-      <!-- <div class="setting-sidebar" id="demoSettingSidebar">
-         <div class="wrapper" id="demoSettingSidebarScroll">
-            <a class="demo-settings-icon" id="demoSettingSidebarTrigger" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="icon-settings tx-16"></i>
-            </a>	
-            <ul class="nav nav-tabs nav-pills nav-fill">
-               <li class="nav-item">
-                  <a class="nav-link active show" data-toggle="tab" href="#nav-dashboard">Dashboard</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#nav-frontend">Frontend</a>
-               </li>
-            </ul> -->
-            <!-- Backend Dashboard -->
-           <!-- <div class="tab-content">
-               <div class="tab-pane fade active show" id="nav-dashboard">
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Default Version</h5>
-                     <img src="assets/images/demo/dashboard/index1.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Semi-Dark Version</h5>
-                     <img src="assets/images/demo/dashboard/dark-index1.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/semi-dark/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Dark Version</h5>
-                     <img src="assets/images/demo/dashboard/full-dark-index1.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/dark/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Boxed Version</h5>
-                     <img src="assets/images/demo/dashboard/boxed-index1.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/boxed/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30">						
-                     <a href="http://themeforest.net/item/metrical-multipurpose-bootstrap4-admin-dashboard-template/24250418" target="_blank" class="btn btn-lg btn-primary btn-block">Download Now</a>
-                  </div>
-               </div> -->
-               <!-- Frontend Templates -->
-               <!--<div class="tab-pane fade" id="nav-frontend">
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Ecommerce</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/ecommerce/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Cryptocurrency</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/cryptocurrency/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Helpdesk Center</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/helpdesk/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Project Management</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/project/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Server Management</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/server/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Education</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/education/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Event Management</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/event/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30 tx-center bd">
-                     <h5 class="tx-dark tx-13 pd-y-10 bd-b mb-0">Social Activity</h5>
-                     <img src="assets/images/demo/frontend/coming-soon.png" alt="" class="img-fluid d-block m-auto">
-                     <span class="d-block pd-10 bd-t">						
-                     <a href="http://colorlib.net/metrical/templates/social/index.html" target="_blank" class="btn btn-sm btn-primary">Live Preview</a>
-                     </span>
-                  </div>
-                  <div class="mg-y-30">						
-                     <a href="http://themeforest.net/item/metrical-multipurpose-bootstrap4-admin-dashboard-template/24250418" target="_blank" class="btn btn-lg btn-primary btn-block">Download Now</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div> -->
-      <!--/ Demo Sidebar End  -->
       <!--================================-->
       <!-- Footer Script -->
       <!--================================-->
