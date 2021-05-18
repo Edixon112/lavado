@@ -1,4 +1,6 @@
 <?php
+$user = UserData::getById($_SESSION["user_id"]);
+
 class CitaData
  {
 	public static $tablename = "cita";

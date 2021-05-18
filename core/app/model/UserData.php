@@ -15,6 +15,7 @@ class UserData {
 		$this->is_dueno=null;
         $this->is_admin = 0;
         $this->is_active = 0;
+		$this->idempresa=0;
 	} 
 
   
