@@ -26,7 +26,7 @@
 									<!-- <div class="input-group-prepend">
 									<span class="input-group-text" id="basic-addon3"><i class="fa fa-user"></i></span>
 								</div> -->
-								<input type="text" class="form-control" name="nombre"value="<?php echo $clientes->nombre; ?>" id="nombre" placeholder="Username" aria-label="Username" aria-describedby="basic-addon3">
+								<input type="text" class="form-control" name="nombre" value="<?php echo $clientes->nombre; ?>" id="nombre" placeholder="Username" aria-label="Username" aria-describedby="basic-addon3">
 	             			</div>	
 						</div>
 						<div class="col-md-6 mb-3">
