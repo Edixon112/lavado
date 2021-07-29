@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   <title>auto lavado</title>
+   <title>Auto Lavado</title>
 </head>
 
 <body>
