@@ -1,5 +1,10 @@
 <?php
 
+$user = UserData::getById($_SESSION["user_id"]);
+
+$empresa = EmpresaData::getByIdUser($user->id);
+
+
 $nombre=$_POST["nombre"];
 $apellido=$_POST["apellido"];
 $cc=$_POST["cc"];
@@ -12,6 +17,7 @@ $cliente->nombre=$nombre;
 $cliente->apellido=$apellido;
 $cliente->cc=$cc;
 $cliente->celular=$celular;
+$cliente->idempresa= $empresa;
 
 
 $aux=$cliente->add();

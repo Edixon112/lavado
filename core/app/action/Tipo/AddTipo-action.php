@@ -1,18 +1,16 @@
 <?php
 $user = UserData::getById($_SESSION["user_id"]);
 
-$nombre=$_POST["nombre"];
+$empresa = EmpresaData::getByIdUser($user->id);
 
-$tipo= new TipoData();
+$nombre = $_POST["nombre"];
 
-$tipo->nombre=$nombre;
-$tipo->idempresa=$user->idempresa;
+$tipo = new TipoData();
+
+$tipo->nombre = $nombre;
+$tipo->idempresa = $empresa;
 
 
-$aux=$tipo->add();
+$aux = $tipo->add();
 
 print "<script>window.location='index.php?view=Tipo/ViewTipo';</script>";//redireccion al index
-
-
-
-?>

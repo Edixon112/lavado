@@ -12,13 +12,14 @@ class ClienteData
         $this->apellido = "";
         $this->cc = "";
 		$this->celular = "";
-		$this->activo = 0; 
+		$this->activo = 0;
+		$this->idempresa = ""; 
 	} 
 
    
 	public function add(){
-		$sql = "insert into cliente (nombre,apellido,cc,celular,activo) ";
-		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\",\"$this->celular\",\"$this->activo\")";
+		$sql = "insert into cliente (nombre,apellido,cc,celular,activo,idempresa) ";
+		$sql .= "value (\"$this->nombre\",\"$this->apellido\",\"$this->cc\",\"$this->celular\",\"$this->activo\",\"$this->idempresa\")";
 		return Executor::doit($sql);
 	}
 
@@ -28,7 +29,8 @@ class ClienteData
 		nombre='".$this->nombre."',
 		apellido='".$this->apellido."',
 		cc='".$this->cc."',
-		celular'".$this->celular."'
+		celular'".$this->celular."',
+		idempresa'".$this->idempresa."'
 		where id='".$this->id."'";
 		return	Executor::doit($sql);
 	}

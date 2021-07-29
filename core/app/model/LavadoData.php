@@ -13,7 +13,7 @@ class LavadoData
 		$this->idcliente = "";
         $this->idvehiculo = "";
 		$this->estado = "";
-
+		$this->idempresa = "";
 	} 
 
 	public function update1(){
@@ -38,7 +38,6 @@ class LavadoData
 		$sql .= "value (\"$this->fechadeentrada\",\"$this->idcliente\",\"$this->idvehiculo\")";
 		return Executor::doit($sql);
 	}
-
 
 
 	public static function delById($id){
