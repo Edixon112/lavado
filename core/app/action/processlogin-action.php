@@ -15,7 +15,7 @@ if(!isset($_SESSION["user_id"])) {//SI SE CREA UNA INSTANCIA DE UNA SESION
 
 			$con = $base->connect();// HACEMOS LA CONEXION 
 
-			$sql = "select * from user where user=\"".$user."\" and pass= \"".$pass."\" and is_active=1";
+			$sql = "select * from user where user=\"".$user."\" and pass= \"".$pass."\" ";
 			//VERIFICAMOS QUE SE ENCUENTRE EN LA BASE DE DATOS 
 
 			//print $sql;

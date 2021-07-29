@@ -12,15 +12,14 @@ class UserData {
 		$this->rol = null;
 		$this->user = null; 
 		$this->pass = null;
-        $this->is_active = 0;
-		$this->idempresa=0;
+       
 	} 
 
   
 
 	public function add(){
-		$sql = "insert into user (nombre,cc,email,telefono,rol,user,pass,is_admin,is_active) ";
-		$sql .= "value (\"$this->nombre\",\"$this->cc\",\"$this->email\",\"$this->telefono\",\"$this->rol\",\"$this->user\",\"$this->pass\",\"$this->is_admin\",\"$this->is_active\")";
+		$sql = "insert into user (nombre,cc,email,telefono,rol,user,pass) ";
+		$sql .= "value (\"$this->nombre\",\"$this->cc\",\"$this->email\",\"$this->telefono\",\"$this->rol\",\"$this->user\",\"$this->pass\")";
 		return Executor::doit($sql);
 	}
 
